@@ -6,7 +6,7 @@
   <link href="https://alongsoft2018.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://alongsoft2018.github.io.git/"/>
-  <updated>2021-07-25T06:04:28.884Z</updated>
+  <updated>2021-07-25T17:58:20.137Z</updated>
   <id>https://alongsoft2018.github.io.git/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QuerySet常用方法</title>
+    <link href="https://alongsoft2018.github.io.git/2021/07/26/Django_QuerySet/"/>
+    <id>https://alongsoft2018.github.io.git/2021/07/26/Django_QuerySet/</id>
+    <published>2021-07-25T17:56:00.000Z</published>
+    <updated>2021-07-25T17:58:20.137Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="QuerySet常用方法"><a href="#QuerySet常用方法" class="headerlink" title="QuerySet常用方法"></a>QuerySet常用方法</h1><ul><li>使用 connection.queries 可以查看sql语句</li></ul><ul><li>filter 将满足条件的结果返回，返回值为QuerySet对象</li></ul><ul><li>exclude 将满足条件的结果过滤掉,返回值为QuerySet对象</li><li>annotate 给QuerySet中的每一个对象都添加一个查询表达式，（Q,F,聚合函数）的字段</li><li>order_by 安装某个字段进行排序，默认为从小到大排序，如果想要重大到小可以在字段前加“-”,需要注意</li><li>order_by可以传递多个参数，会按照先后级别进行排序，而且order_by还可以用annotate新增的字段来排序，注意：order_by重复调用会只会保存最后一个。</li><li>values:提取需要哪些字段，默认会把全部都提取出来。返回的结果是QuerySet，但是其中包裹的不是模型，而是字典，如果想要提取关联数据，那么可以通过F表达式来完成。values也可以使用聚合函数values_list 提取需要字段，返回QuerySet，其中包裹的元组，如果数据只有一条，则可以使用flat=True进行扁平化处理，直接返回结果</li><li>all 方法：返回全部数据（返回包裹对象的QuerySet）</li><li>select_related : 可以将关联的对象一起查询出来，只能用于外键连接的形式（一对多或者一对一的形式）</li><li>prefetch_related : 使用的时候传入反向引用的时候调用的名称默认为 filed_set，使用这个方式可以用来查询多对一或者多对多的方式，也可以用来查询一对一或者一对多的，但是不推荐。</li><li>defer : 过滤掉不需要的字段，返回值是一个包裹着模型的QuerySet</li><li>only : 提取某些字段，返回一个包裹模型的QuerySet</li><li>get : 直接返回对象，只能返回一条数据，如果返回数据超过一条就会报错，如果没有匹配到任何数据也会报错。</li><li>create : 用于增加一条数据，并且将数据保存在数据库中，相当于先创建数据，然后调用save方法</li><li>get_or_create : 如果给定的条件存在数据就查找返回，如果不存在就创建一个，然后在返回，返回结果是一个元组，元组中两个内容，第一个是模型对象，第二个是bool值，如果没有创建返回False，如果创建了返还True。</li><li>bulk_create ：可以一次性创建多条数据。</li><li>count ：获取满足条件的数据的个数</li><li>first,last 分别返回QuerySet中第一条和最后一条数据</li><li>exists ： 判断数据是否存在，存在返回True，不存在返回False</li><li>distinct : 去重，默认按照全部字段判断。注意如果和order_by同时使用会失效</li><li>update ：更新数据</li><li>delete : 删除数据，需要注意：字段中on_delete的级联删除方式</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;QuerySet常用方法&quot;&gt;&lt;a href=&quot;#QuerySet常用方法&quot; class=&quot;headerlink&quot; title=&quot;QuerySet常用方法&quot;&gt;&lt;/a&gt;QuerySet常用方法&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;使用 connection.queries 可以</summary>
+      
+    
+    
+    
+    
+    <category term="python，Django" scheme="https://alongsoft2018.github.io.git/tags/python%EF%BC%8CDjango/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django - ForeignKey 用法</title>
+    <link href="https://alongsoft2018.github.io.git/2021/07/26/Django_ForeignKey/"/>
+    <id>https://alongsoft2018.github.io.git/2021/07/26/Django_ForeignKey/</id>
+    <published>2021-07-25T17:54:22.000Z</published>
+    <updated>2021-07-25T18:01:26.942Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ForeignKey"><a href="#ForeignKey" class="headerlink" title="ForeignKey"></a>ForeignKey</h1><h2 id="1-创建Model-测试"><a href="#1-创建Model-测试" class="headerlink" title="1.创建Model 测试"></a>1.创建Model 测试</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    username = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line">    password = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        db_table = <span class="string">&#x27;User&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    content = models.TextField()</span><br><span class="line">    author = models.ForeignKey(<span class="string">&#x27;User&#x27;</span>, on_delete=models.CASCADE)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">    db_table = <span class="string">&#x27;Article&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="2-引入"><a href="#2-引入" class="headerlink" title="2.引入"></a>2.引入</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Order_Session, db_wx_login,User,Article</span><br></pre></td></tr></table></figure><h2 id="3-外键的方式引用"><a href="#3-外键的方式引用" class="headerlink" title="3. 外键的方式引用"></a>3. 外键的方式引用</h2><p>  在django中，如果这个模型被其它模型使用外键的方式引用，那么django会自动给这个模型添加一个属性，这个属性的名字为：引用的模型名称小写形式_set 。上边Article模型引用了User模型，所以User模型会被django添加一个属性为：article_set，返回的也是一个QuerySet，也可使用all方法获取全部文章，或者使用first获取第一篇文章。</p><hr><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(request.method)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建测试数据</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;user = User(username=&#x27;lxc&#x27;, password=&#x27;123456&#x27;)</span></span><br><span class="line"><span class="string">    user.save()</span></span><br><span class="line"><span class="string">    article = Article(title=&#x27;测试标题&#x27;, content=&#x27;测试内容&#x27;)</span></span><br><span class="line"><span class="string">    article.author = user</span></span><br><span class="line"><span class="string">    article.save()</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment">#pk代表primary key 大部分时候==id</span></span><br><span class="line">    <span class="comment">#先查询User表id=4的对象给author，在查author在Article的对象</span></span><br><span class="line">    abc = Article.objects.<span class="built_in">filter</span>(author=User.objects.get(<span class="built_in">id</span>=<span class="number">4</span>))</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> abc:</span><br><span class="line">        <span class="comment">#&lt;class &#x27;django.db.models.query.QuerySet&#x27;&gt; == abc</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;abc: &#x27;</span>,item.title,item.content,item.author_id,<span class="built_in">type</span>(abc))</span><br><span class="line">    <span class="comment">#user = &lt;class &#x27;api.models.User&#x27;&gt;</span></span><br><span class="line">    user = User.objects.get(<span class="built_in">id</span>=<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b1: &#x27;</span>,user.username,user.password,user.<span class="built_in">id</span>,<span class="built_in">type</span>(user))</span><br><span class="line">    b = user.article_set.<span class="built_in">all</span>()</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> b:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;b2: &#x27;</span>,item.title,item.content,item.author_id)</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="built_in">all</span> = Article.objects.<span class="built_in">all</span>()</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> <span class="built_in">all</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;all: &#x27;</span>,item,item.title,item.content,item.author_id)</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;end&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;post_create It is not a POST request!!!&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;ForeignKey&quot;&gt;&lt;a href=&quot;#ForeignKey&quot; class=&quot;headerlink&quot; title=&quot;ForeignKey&quot;&gt;&lt;/a&gt;ForeignKey&lt;/h1&gt;&lt;h2 id=&quot;1-创建Model-测试&quot;&gt;&lt;a href=&quot;#1-创建Model</summary>
+      
+    
+    
+    
+    
+    <category term="python，Django" scheme="https://alongsoft2018.github.io.git/tags/python%EF%BC%8CDjango/"/>
+    
+  </entry>
   
   <entry>
     <title>涅槃重生 开篇</title>
