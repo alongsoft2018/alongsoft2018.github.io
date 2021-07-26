@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#33474d">
+	<title>Django Models 常用方法 | 崖墓</title>
+	<link rel="stylesheet" href="/css/style.css" />
+	
+      <link rel="alternate" href="/atom.xml" title="崖墓" type="application/atom+xml">
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+	<header class="header">
+		<nav class="header__nav">
+			
+				<a href="/archives" class="header__link">档案</a>
+			
+				<a href="/tags" class="header__link">标签</a>
+			
+				<a href="/atom.xml" class="header__link">RSS</a>
+			
+		</nav>
+		<h1 class="header__title"><a href="/">崖墓</a></h1>
+		<h2 class="header__subtitle">涅槃重生</h2>
+	</header>
+
+	<main>
+		<article>
+	
+		<h1>Django Models 常用方法</h1>
+	
+	<div class="article__infos">
+		<span class="article__date">2021-07-26</span><br />
+		
+		
+			<span class="article__tags">
+			  	<a class="article__tag-none-link" href="/tags/python-Django/" rel="tag">python,Django</a>
+			</span>
+		
+	</div>
+
+	
+
+	
+		<h1 id="Modles"><a href="#Modles" class="headerlink" title="Modles"></a>Modles</h1><ul>
+<li>1  null   默认为False，True则表示可以为null。（空字符串在数据库中可能被存储为’’）</li>
+<li>2  blank  默认为False，True表示可以为空。</li>
+<li>3  choice  可选的，限制了该选项的字段值必须是所指定的choice中的一个。</li>
+<li>4  db_column  数据库column名称。默认为本字段的名称。</li>
+<li>5  db_index  如果为True的话，该字段的数据库索引将会被创建</li>
+<li>6  default   设置该字段的默认值，可以是值也可以是对象。</li>
+<li>7  editable   默认为True，若为False，则不会在admin/界面显示</li>
+<li>8  primary_key  若设置为True，则表示将该字段设置为主键。一般情况下django默认会设置一个自增长的id主键。</li>
+<li>9  unique   若设置为True，该字段值不可重复</li>
+</ul>
+<hr>
+<ul>
+<li>AutoField()[自增长]  根据已有id自增长的整形唯一字段</li>
+<li>BooleanField()  布尔型字段</li>
+<li>CharField() [变长] 字符型字段</li>
+<li>DateTimeField() 日期和时间字段，值为datetime.datetime实例</li>
+<li>DecimalField()  混合精度的小数型数字字段</li>
+<li>EmailField(max_length=254, **options)  邮件字段</li>
+<li>FileField(upload_to=None, max_length=100, **options)  文件上传字段</li>
+<li>FloatField()  浮点字段</li>
+<li>ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, **options) 图像字段</li>
+<li>IntegerField  整形字段。</li>
+<li>GenericIPAddressField(protocol=’both’, unpack_ipv4=False, **options)  ip地址字段<br>TextField()   与CharField类似，但一般用来存储体积较大的文本。</li>
+<li>URLField(max_length=200, **options)    URL字段</li>
+<li>TimeField(auto_now=False, auto_now_add=False, **options)   时间字段，其值为datetime.time实例</li>
+</ul>
+<hr>
+<ul>
+<li>1  ForeignKey(othermodel, on_delete, **options)  多对一或者一对多或者外键字段。</li>
+<li>2  ManyToManyField(othermodel, **options)  多对多字段。</li>
+<li>3  OneToOneField(othermodel, on_delete, parent_link=False, **options)  一对一字段。</li>
+</ul>
+<hr>
+
+	
+
+	
+		<span class="different-posts"><a href="/2021/07/26/Django_models/" onclick="window.history.go(-1); return false;">⬅️ Go back </a></span>
+
+	
+
+</article>
+
+	</main>
+
+	<footer class="footer">
+	<div class="footer-content">
+		
+	      <div class="footer__element">
+	<p>Hi there, <br />welcome to my Blog glad you found it. Have a look around, will you?</p>
+</div>
+
+	    
+	      <div class="footer__element">
+	<h5>Check out</h5>
+	<ul class="footer-links">
+		<li class="footer-links__link"><a href="/archives">Archive</a></li>
+		
+		  <li class="footer-links__link"><a href="/atom.xml">RSS</a></li>
+	    
+		<li class="footer-links__link"><a href="/about">about page</a></li>
+		<li class="footer-links__link"><a href="/tags">Tags</a></li>
+		<li class="footer-links__link"><a href="/categories">Categories</a></li>
+	</ul>
+</div>
+
+	    
+
+		<div class="footer-credit">
+			<span>© 2021 alongsoft | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/HoverBaum/meilidu-hexo">MeiliDu</a></span>
+		</div>
+
+	</div>
+
+
+</footer>
+
+
+
+</body>
+
+</html>
