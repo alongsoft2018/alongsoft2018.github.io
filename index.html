@@ -1,453 +1,199 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>崖墓 - 涅槃重生</title><meta name="author" content="alongsoft"><meta name="copyright" content="alongsoft"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="崖墓">
+<meta property="og:url" content="https://alongsoft2018.github.io.git/index.html">
+<meta property="og:site_name" content="崖墓">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="alongsoft">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://alongsoft2018.github.io.git/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '崖墓',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-07-27 15:49:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="theme-color" content="#33474d">
-	<title>崖墓</title>
-	<link rel="stylesheet" href="/css/style.css" />
-	
-      <link rel="alternate" href="/atom.xml" title="崖墓" type="application/atom+xml">
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-<body>
-
-	<header class="header">
-		<nav class="header__nav">
-			
-				<a href="/archives" class="header__link">档案</a>
-			
-				<a href="/tags" class="header__link">标签</a>
-			
-				<a href="/atom.xml" class="header__link">RSS</a>
-			
-		</nav>
-		<h1 class="header__title"><a href="/">崖墓</a></h1>
-		<h2 class="header__subtitle">涅槃重生</h2>
-	</header>
-
-	<main>
-		
-
-
-
-	<article>
-	
-		<h1><a href="/2021/07/26/Django_models/">Django Models 常用方法</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-07-26</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/python-Django/" rel="tag">python,Django</a>
-			</span>
-		
-	</div>
-
-	
-
-	
-		<h1 id="Modles"><a href="#Modles" class="headerlink" title="Modles"></a>Modles</h1><ul>
-<li>1  null   默认为False，True则表示可以为null。（空字符串在数据库中可能被存储为’’）</li>
-<li>2  blank  默认为False，True表示可以为空。</li>
-<li>3  choice  可选的，限制了该选项的字段值必须是所指定的choice中的一个。</li>
-<li>4  db_column  数据库column名称。默认为本字段的名称。</li>
-<li>5  db_index  如果为True的话，该字段的数据库索引将会被创建</li>
-<li>6  default   设置该字段的默认值，可以是值也可以是对象。</li>
-<li>7  editable   默认为True，若为False，则不会在admin/界面显示</li>
-<li>8  primary_key  若设置为True，则表示将该字段设置为主键。一般情况下django默认会设置一个自增长的id主键。</li>
-<li>9  unique   若设置为True，该字段值不可重复</li>
-</ul>
-<hr>
-<ul>
-<li>AutoField()[自增长]  根据已有id自增长的整形唯一字段</li>
-<li>BooleanField()  布尔型字段</li>
-<li>CharField() [变长] 字符型字段</li>
-<li>DateTimeField() 日期和时间字段，值为datetime.datetime实例</li>
-<li>DecimalField()  混合精度的小数型数字字段</li>
-<li>EmailField(max_length=254, **options)  邮件字段</li>
-<li>FileField(upload_to=None, max_length=100, **options)  文件上传字段</li>
-<li>FloatField()  浮点字段</li>
-<li>ImageField(upload_to=None, height_field=None, width_field=None, max_length=100, **options) 图像字段</li>
-<li>IntegerField  整形字段。</li>
-<li>GenericIPAddressField(protocol=’both’, unpack_ipv4=False, **options)  ip地址字段<br>TextField()   与CharField类似，但一般用来存储体积较大的文本。</li>
-<li>URLField(max_length=200, **options)    URL字段</li>
-<li>TimeField(auto_now=False, auto_now_add=False, **options)   时间字段，其值为datetime.time实例</li>
-</ul>
-<hr>
-<ul>
-<li>1  ForeignKey(othermodel, on_delete, **options)  多对一或者一对多或者外键字段。</li>
-<li>2  ManyToManyField(othermodel, **options)  多对多字段。</li>
-<li>3  OneToOneField(othermodel, on_delete, parent_link=False, **options)  一对一字段。</li>
-</ul>
-<hr>
-
-	
-
-	
-
-</article>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="崖墓" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">崖墓</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">崖墓</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/07/26/Django_models/" title="Django Models 常用方法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Django Models 常用方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/26/Django_models/" title="Django Models 常用方法">Django Models 常用方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-26T08:47:00.000Z" title="Created 2021-07-26 16:47:00">2021-07-26</time></span></div><div class="content">Modles
+1  null   默认为False，True则表示可以为null。（空字符串在数据库中可能被存储为’’）
+2  blank  默认为False，True表示可以为空。
+3  choice  可选的，限制了该选项的字段值必须是所指定的choice中的一个。
+4  db_column  数据库column名称。默认为本字段的名称。
+5  db_index  如果为True的话，该字段的数据库索引将会被创建
+6  default   设置该字段的默认值，可以是值也可以是对象。
+7  editable   默认为True，若为False，则不会在admin/界面显示
+8  primary_key  若设置为True，则表示将该字段设置为主键。一般情况下django默认会设置一个自增长的id主键。
+9  unique   若设置为True，该字段值不可重复
 
 
 
+AutoField()[自增长]  根据已有id自增长的整形唯一字段
+BooleanField()  布尔型字段
+CharField() [变长] 字符型字段
+DateTimeField() 日期和时间字段，值为date ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/07/26/Django_QuerySet/" title="QuerySet常用方法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="QuerySet常用方法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/26/Django_QuerySet/" title="QuerySet常用方法">QuerySet常用方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-25T17:56:00.000Z" title="Created 2021-07-26 01:56:00">2021-07-26</time></span></div><div class="content">QuerySet常用方法
+使用 connection.queries 可以查看sql语句
 
-	<article>
-	
-		<h1><a href="/2021/07/26/Django_QuerySet/">QuerySet常用方法</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-07-26</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/python%EF%BC%8CDjango/" rel="tag">python，Django</a>
-			</span>
-		
-	</div>
 
-	
+filter 将满足条件的结果返回，返回值为QuerySet对象
 
-	
-		<h1 id="QuerySet常用方法"><a href="#QuerySet常用方法" class="headerlink" title="QuerySet常用方法"></a>QuerySet常用方法</h1><ul>
-<li>使用 connection.queries 可以查看sql语句</li>
-</ul>
-<ul>
-<li>filter 将满足条件的结果返回，返回值为QuerySet对象</li>
-</ul>
-<ul>
-<li>exclude 将满足条件的结果过滤掉,返回值为QuerySet对象</li>
-<li>annotate 给QuerySet中的每一个对象都添加一个查询表达式，（Q,F,聚合函数）的字段</li>
-<li>order_by 安装某个字段进行排序，默认为从小到大排序，如果想要重大到小可以在字段前加“-”,需要注意</li>
-<li>order_by可以传递多个参数，会按照先后级别进行排序，而且order_by还可以用annotate新增的字段来排序，注意：order_by重复调用会只会保存最后一个。</li>
-<li>values:提取需要哪些字段，默认会把全部都提取出来。返回的结果是QuerySet，但是其中包裹的不是模型，而是字典，如果想要提取关联数据，那么可以通过F表达式来完成。values也可以使用聚合函数values_list 提取需要字段，返回QuerySet，其中包裹的元组，如果数据只有一条，则可以使用flat=True进行扁平化处理，直接返回结果</li>
-<li>all 方法：返回全部数据（返回包裹对象的QuerySet）</li>
-<li>select_related : 可以将关联的对象一起查询出来，只能用于外键连接的形式（一对多或者一对一的形式）</li>
-<li>prefetch_related : 使用的时候传入反向引用的时候调用的名称默认为 filed_set，使用这个方式可以用来查询多对一或者多对多的方式，也可以用来查询一对一或者一对多的，但是不推荐。</li>
-<li>defer : 过滤掉不需要的字段，返回值是一个包裹着模型的QuerySet</li>
-<li>only : 提取某些字段，返回一个包裹模型的QuerySet</li>
-<li>get : 直接返回对象，只能返回一条数据，如果返回数据超过一条就会报错，如果没有匹配到任何数据也会报错。</li>
-<li>create : 用于增加一条数据，并且将数据保存在数据库中，相当于先创建数据，然后调用save方法</li>
-<li>get_or_create : 如果给定的条件存在数据就查找返回，如果不存在就创建一个，然后在返回，返回结果是一个元组，元组中两个内容，第一个是模型对象，第二个是bool值，如果没有创建返回False，如果创建了返还True。</li>
-<li>bulk_create ：可以一次性创建多条数据。</li>
-<li>count ：获取满足条件的数据的个数</li>
-<li>first,last 分别返回QuerySet中第一条和最后一条数据</li>
-<li>exists ： 判断数据是否存在，存在返回True，不存在返回False</li>
-<li>distinct : 去重，默认按照全部字段判断。注意如果和order_by同时使用会失效</li>
-<li>update ：更新数据</li>
-<li>delete : 删除数据，需要注意：字段中on_delete的级联删除方式</li>
-</ul>
 
-	
+exclude 将满足条件的结果过滤掉,返回值为QuerySet对象
+annotate 给QuerySet中的每一个对象都添加一个查询表达式，（Q,F,聚合函数）的字段
+order_by 安装某个字段进行排序，默认为从小到大排序，如果想要重大到小可以在字段前加“-”,需要注意
+order_by可以传递多个参数，会按照先后级别进行排序，而且order_by还可以用annotate新增的字段来排序，注意：order_by重复调用会只会保存最后一个。
+values:提取需要哪些字段，默认会把全部都提取出来。返回的结果是QuerySet，但是其中包裹的不是模型，而是字典，如果想要提取关联数据，那么可以通过F表达式来完成。values也可以使用聚合函数values_list 提取需要字段，返回QuerySet，其中包裹的元组，如果数据只有一条，则可以使用flat=True进行扁平化处理，直接返回结果
+all 方法：返回全部数据（返回包 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/07/26/Django_ForeignKey/" title="Django - ForeignKey 用法">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Django - ForeignKey 用法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/26/Django_ForeignKey/" title="Django - ForeignKey 用法">Django - ForeignKey 用法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-25T17:54:22.000Z" title="Created 2021-07-26 01:54:22">2021-07-26</time></span></div><div class="content">ForeignKey1.创建Model 测试1234567891011121314class User(models.Model):    username = models.CharField(max_length=50)    password = models.CharField(max_length=50)    class Meta:        db_table = &#x27;User&#x27;class Article(models.Model):    title = models.CharField(max_length=100)    content = models.TextField()    author = models.ForeignKey(&#x27;User&#x27;, on_delete=models.CASCADE)    class Meta:	    db_table = &#x27;Article&#x27;
+2.引入1from .models import Order_Session, db_wx_login,User,Articl ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/07/25/2021.07.24/" title="涅槃重生 开篇">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="涅槃重生 开篇"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/25/2021.07.24/" title="涅槃重生 开篇">涅槃重生 开篇</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-25T06:02:22.000Z" title="Created 2021-07-25 14:02:22">2021-07-25</time></span></div><div class="content">学习知识Makedown基础
+Quick Start基本常识一. 目录123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题
+一级标题二级标题三级标题四级标题五级标题六级标题
+二. 段落Markdown [段落]没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。回车
+三. 字体123456*斜体文本*_斜体文本_**粗体文本**__粗体文本__***粗斜体文本***___粗斜体文本___
 
-	
+斜体文本斜体文本粗体文本粗体文本粗斜体文本粗斜体文本
 
-</article>
+四. 分隔线12345**** * ******- - -----------
 
 
 
+- - -single asterisks
+single underscores
+double asterisks
+double underscores
+五. 删除线GOOGLE.COMBAIDU.COM
+六. 下划线带下划线文本
 
-	<article>
-	
-		<h1><a href="/2021/07/26/Django_ForeignKey/">Django - ForeignKey 用法</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-07-26</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/python-Django/" rel="tag">python,Django</a>
-			</span>
-		
-	</div>
+七. 脚注要注明的文本创建脚注格式类似这样 RUNOOB。RUNOOB: 菜鸟教程 — 学的不仅是技术，更是梦想！！！
 
-	
-
-	
-		<h1 id="ForeignKey"><a href="#ForeignKey" class="headerlink" title="ForeignKey"></a>ForeignKey</h1><h2 id="1-创建Model-测试"><a href="#1-创建Model-测试" class="headerlink" title="1.创建Model 测试"></a>1.创建Model 测试</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    username = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line">    password = models.CharField(max_length=<span class="number">50</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">        db_table = <span class="string">&#x27;User&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Article</span>(<span class="params">models.Model</span>):</span></span><br><span class="line">    title = models.CharField(max_length=<span class="number">100</span>)</span><br><span class="line">    content = models.TextField()</span><br><span class="line">    author = models.ForeignKey(<span class="string">&#x27;User&#x27;</span>, on_delete=models.CASCADE)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span></span><br><span class="line">	    db_table = <span class="string">&#x27;Article&#x27;</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-引入"><a href="#2-引入" class="headerlink" title="2.引入"></a>2.引入</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> .models <span class="keyword">import</span> Order_Session, db_wx_login,User,Article</span><br></pre></td></tr></table></figure>
-<h2 id="3-外键的方式引用"><a href="#3-外键的方式引用" class="headerlink" title="3. 外键的方式引用"></a>3. 外键的方式引用</h2><p>  在django中，如果这个模型被其它模型使用外键的方式引用，那么django会自动给这个模型添加一个属性，这个属性的名字为：引用的模型名称小写形式_set 。上边Article模型引用了User模型，所以User模型会被django添加一个属性为：article_set，返回的也是一个QuerySet，也可使用all方法获取全部文章，或者使用first获取第一篇文章。</p>
-<hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>(<span class="params">request</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(request.method)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 创建测试数据</span></span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;user = User(username=&#x27;lxc&#x27;, password=&#x27;123456&#x27;)</span></span><br><span class="line"><span class="string">    user.save()</span></span><br><span class="line"><span class="string">    article = Article(title=&#x27;测试标题&#x27;, content=&#x27;测试内容&#x27;)</span></span><br><span class="line"><span class="string">    article.author = user</span></span><br><span class="line"><span class="string">    article.save()</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    <span class="comment">#pk代表primary key 大部分时候==id</span></span><br><span class="line">    <span class="comment">#先查询User表id=4的对象给author，在查author在Article的对象</span></span><br><span class="line">    abc = Article.objects.<span class="built_in">filter</span>(author=User.objects.get(<span class="built_in">id</span>=<span class="number">4</span>))</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> abc:</span><br><span class="line">        <span class="comment">#&lt;class &#x27;django.db.models.query.QuerySet&#x27;&gt; == abc</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;abc: &#x27;</span>,item.title,item.content,item.author_id,<span class="built_in">type</span>(abc))</span><br><span class="line">    <span class="comment">#user = &lt;class &#x27;api.models.User&#x27;&gt;</span></span><br><span class="line">    user = User.objects.get(<span class="built_in">id</span>=<span class="number">1</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;b1: &#x27;</span>,user.username,user.password,user.<span class="built_in">id</span>,<span class="built_in">type</span>(user))</span><br><span class="line">    b = user.article_set.<span class="built_in">all</span>()</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> b:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;b2: &#x27;</span>,item.title,item.content,item.author_id)</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="built_in">all</span> = Article.objects.<span class="built_in">all</span>()</span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> <span class="built_in">all</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;all: &#x27;</span>,item,item.title,item.content,item.author_id)</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;end&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> HttpResponse(<span class="string">&#x27;post_create It is not a POST request!!!&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-	
-
-	
-
-</article>
-
-
-
-
-	<article>
-	
-		<h1><a href="/2021/07/25/2021.07.24/">涅槃重生 开篇</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-07-25</span><br />
-		
-		
-			<span class="article__tags">
-			  	<a class="article__tag-none-link" href="/tags/word-Makedown/" rel="tag">word,Makedown</a>
-			</span>
-		
-	</div>
-
-	
-
-	
-		<p>学习知识Makedown基础</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="基本常识"><a href="#基本常识" class="headerlink" title="基本常识"></a>基本常识</h3><h4 id="一-目录"><a href="#一-目录" class="headerlink" title="一. 目录"></a>一. 目录</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一级标题</span></span><br><span class="line"><span class="comment">## 二级标题</span></span><br><span class="line"><span class="comment">### 三级标题</span></span><br><span class="line"><span class="comment">#### 四级标题</span></span><br><span class="line"><span class="comment">##### 五级标题</span></span><br><span class="line"><span class="comment">###### 六级标题</span></span><br></pre></td></tr></table></figure>
-<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
-<h4 id="二-段落"><a href="#二-段落" class="headerlink" title="二. 段落"></a>二. 段落</h4><p>Markdown [段落]没有特殊的格式，直接_编写_文字就好，段落的换行是使用两个以上空格加上回车。<strong>回车</strong></p>
-<h4 id="三-字体"><a href="#三-字体" class="headerlink" title="三. 字体"></a>三. 字体</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
-<hr>
-<p><em>斜体文本</em><br><em>斜体文本</em><br><strong>粗体文本</strong><br><strong>粗体文本</strong><br><em><strong>粗斜体文本</strong></em><br><em><strong>粗斜体文本</strong></em></p>
-<hr>
-<h4 id="四-分隔线"><a href="#四-分隔线" class="headerlink" title="四. 分隔线"></a>四. 分隔线</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<p><em>single asterisks</em></p>
-<p><em>single underscores</em></p>
-<p><strong>double asterisks</strong></p>
-<p><strong>double underscores</strong></p>
-<h4 id="五-删除线"><a href="#五-删除线" class="headerlink" title="五. 删除线"></a>五. 删除线</h4><p>GOOGLE.COM<br><del>BAIDU.COM</del></p>
-<h4 id="六-下划线"><a href="#六-下划线" class="headerlink" title="六. 下划线"></a>六. 下划线</h4><p><u>带下划线文本</u></p>
-<hr>
-<h4 id="七-脚注"><a href="#七-脚注" class="headerlink" title="七. 脚注"></a>七. 脚注</h4><p>[^要注明的文本]<br>创建脚注格式类似这样 [^RUNOOB]。<br>[^RUNOOB]: 菜鸟教程 – 学的不仅是技术，更是梦想！！！</p>
-<hr>
-<h4 id="八-列表"><a href="#八-列表" class="headerlink" title="八. 列表"></a>八. 列表</h4><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-<ol>
-<li>第一项：<ul>
-<li>第一项嵌套的第一个元素</li>
-<li>第一项嵌套的第二个元素</li>
-</ul>
-</li>
-<li>第二项：<ul>
-<li>第二项嵌套的第一个元素</li>
-<li>第二项嵌套的第二个元素</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h4 id="九-区块中使用列表"><a href="#九-区块中使用列表" class="headerlink" title="九. 区块中使用列表"></a>九. 区块中使用列表</h4><blockquote>
-<p>区块中使用列表</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-</ol>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-</blockquote>
-<h4 id="十-列表中使用区块"><a href="#十-列表中使用区块" class="headerlink" title="十. 列表中使用区块"></a>十. 列表中使用区块</h4><ul>
-<li>第一项<blockquote>
-<p>菜鸟教程<br>学的不仅是技术更是梦想</p>
-</blockquote>
-</li>
-<li>第二项</li>
-</ul>
-<h4 id="十一-区块-引用"><a href="#十一-区块-引用" class="headerlink" title="十一. 区块 引用"></a>十一. 区块 引用</h4><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号</p>
-<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>第一层嵌套</p>
-<blockquote>
-<p>第二层嵌套</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>这是引用的内容</p>
-<blockquote>
-<p>这是引用的内容</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>这是引用的内容</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<h4 id="十二-代码"><a href="#十二-代码" class="headerlink" title="十二. 代码"></a>十二. 代码</h4><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），代码区块使用 4 个空格或者一个制表符（Tab 键）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;RUNOOB&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h4 id="十三-链接"><a href="#十三-链接" class="headerlink" title="十三. 链接"></a>十三. 链接</h4><p><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a><br>或者<br>&lt;链接地址&gt;</p>
-<p>这是一个链接 <a target="_blank" rel="noopener" href="https://www.runoob.com/">菜鸟教程</a></p>
-<h5 id="高级链接"><a href="#高级链接" class="headerlink" title="高级链接"></a>高级链接</h5><p>这个链接用 1 作为网址变量 <a target="_blank" rel="noopener" href="http://www.google.com/">Google</a><br>这个链接用 runoob 作为网址变量 <a target="_blank" rel="noopener" href="http://www.runoob.com/">Runoob</a><br>然后在文档的结尾为变量赋值（网址）</p>
-<h4 id="十四-图片"><a href="#十四-图片" class="headerlink" title="十四. 图片"></a>十四. 图片</h4><p>![图片alt](图片地址 ‘’图片title’’)</p>
-<hr>
-<p>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。<br>图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</p>
-<hr>
-<p>![blockchain](<a target="_blank" rel="noopener" href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</a><br>u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg “区块链”)</p>
-<hr>
-<p><figure class="figure"><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"><figcaption class="figure__caption">RUNOOB 图标</figcaption></figure></p>
-<hr>
-<p><figure class="figure"><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"><figcaption class="figure__caption">RUNOOB 图标</figcaption></figure></p>
-<hr>
-<p> 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。<br><figure class="figure"><img src="http://static.runoob.com/images/runoob-logo.png" width="50%"></figure></p>
-<hr>
-<h4 id="十四-表格"><a href="#十四-表格" class="headerlink" title="十四. 表格"></a>十四. 表格</h4><table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
-<p>|| <em>Year</em> || <em>Temperature (low)</em> || <em>Temperature (high)</em> ||<br>|| 1900 || -10 || 25 ||<br>|| 1910 || -15 || 30 ||<br>|| 1920 || -10 || 32 ||</p>
-<hr>
-<table>
-<thead>
-<tr>
-<th>姓名</th>
-<th align="center">技能</th>
-<th align="right">排行</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>刘备</td>
-<td align="center">哭</td>
-<td align="right">大哥</td>
-</tr>
-<tr>
-<td>关羽</td>
-<td align="center">打</td>
-<td align="right">二哥</td>
-</tr>
-<tr>
-<td>张飞</td>
-<td align="center">骂</td>
-<td align="right">三弟</td>
-</tr>
-</tbody></table>
-<hr>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">对齐方式</span><br><span class="line">我们可以设置表格的对齐方式：</span><br><span class="line">-: 设置内容和标题栏居右对齐。</span><br><span class="line">:- 设置内容和标题栏居左对齐。</span><br><span class="line">:-: 设置内容和标题栏居中对齐。</span><br></pre></td></tr></table></figure>
-<h4 id="十五-高级功能"><a href="#十五-高级功能" class="headerlink" title="十五.高级功能"></a>十五.高级功能</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">支持的 HTML 元素</span><br><span class="line">不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</span><br><span class="line">目前支持的 HTML 元素有：&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;等 ，如：</span><br></pre></td></tr></table></figure>
-
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
-<hr>
-<h5 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h5><p><strong>文本加粗</strong><br>** 正常显示星号 **</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-
-<h5 id="十六-公式"><a href="#十六-公式" class="headerlink" title="十六.公式"></a>十六.公式</h5><p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 =  \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp;  \frac{\partial Y}{\partial u} &amp; 0 \<br>\frac{\partial X}{\partial v} &amp;  \frac{\partial Y}{\partial v} &amp; 0 \<br>\end{vmatrix}<br>${$tep1}{\style{visibility:hidden}{(x+1)(x+1)}}<br>$$</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[方形] --&gt;B(圆角)</span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line">    C --&gt;|a=1| D[结果1]</span><br><span class="line">    C --&gt;|a=2| E[结果2]</span><br><span class="line">    F[横向流程图]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">%% 语法示例</span><br><span class="line">        gantt</span><br><span class="line">        dateFormat  YYYY-MM-DD</span><br><span class="line">        title 软件开发甘特图</span><br><span class="line">        section 设计</span><br><span class="line">        需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">        原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">        UI设计                     :         des3, after des2, 5d</span><br><span class="line">    未来任务                     :         des4, after des3, 5d</span><br><span class="line">        section 开发</span><br><span class="line">        学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">        设计框架                             :crit, done, after des2, 2d</span><br><span class="line">        开发                                 :crit, active, 3d</span><br><span class="line">        未来任务                              :crit, 5d</span><br><span class="line">        耍                                   :2d</span><br><span class="line">        section 测试</span><br><span class="line">        功能测试                              :active, a1, after des3, 3d</span><br><span class="line">        压力测试                               :after a1  , 20h</span><br><span class="line">        测试报告                               : 48h</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 十七. 其他</span><br><span class="line">More info: [Writing](https://hexo.io/docs/writing.html)</span><br><span class="line"></span><br><span class="line">### Run server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>$ hexo server</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">More info: [Server](https://hexo.io/docs/server.html)</span><br><span class="line"></span><br><span class="line">### Generate static files</span><br><span class="line"></span><br><span class="line">``` python</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h1 id="MeiliDu"><a href="#MeiliDu" class="headerlink" title="MeiliDu"></a>MeiliDu</h1><p><a target="_blank" rel="noopener" href="http://www.repostatus.org/#active"><figure class="figure"><img src="http://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active - The project has reached a stable, usable state and is being actively developed."><figcaption class="figure__caption">Project Status: Active - The project has reached a stable, usable state and is being actively developed.</figcaption></figure></a></p>
-<blockquote>
-<p>a beautiful read</p>
-</blockquote>
-<p>A simple, text focused theme for Hexo. Bringing your readers attention to what is most import: your posts.<br>Check out the <a target="_blank" rel="noopener" href="https://meilidu.github.io/">Demo</a></p>
-<p><figure class="figure"><img src="gitHubAssets/showcase.png" alt="MeiliDu responsive showcase."><figcaption class="figure__caption">MeiliDu responsive showcase.</figcaption></figure></p>
-<h1 id="Get-started"><a href="#Get-started" class="headerlink" title="Get started"></a>Get started</h1><p>:exclamation: Make sure your <strong>Node version is 6.x or above</strong> as the theme uses some ES6 syntax. :exclamation:</p>
-<ol>
-<li>Get the <a target="_blank" rel="noopener" href="https://github.com/HoverBaum/meilidu-hexo/releases/latest">latest release</a>, simply download the file <strong>meilidu.zip</strong>. (see below for cloning)</li>
-<li>Unpack it into your <strong>themes</strong> folder. (You should now have a folder in your themes folder named “meilidu” which should not contain a folder named “meilidu”)</li>
-<li>Change your <strong>_config.yml</strong>: <code>theme: meilidu</code></li>
-</ol>
-<h3 id="Alternative-clone"><a href="#Alternative-clone" class="headerlink" title="Alternative: clone"></a>Alternative: clone</h3><p>You can also manage the theme as a subproject of your website. Simply run the following in the root directory of your project. After that change the theme property in your projects <code>_config.yml</code>.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/HoverBaum/meilidu-hexo.git themes/meilidu</span><br></pre></td></tr></table></figure>
-
-<h1 id="Get-help-and-involved"><a href="#Get-help-and-involved" class="headerlink" title="Get help and involved"></a>Get help and involved</h1><p>Below is a documentation of all features and how to use them as well as some <em>good to know</em> points. If you have any further questions or suggestions please open an issue.</p>
-<p>The issues are open to anyone looking for help or wishing to make a suggestion to improve the theme.</p>
-<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><p>We have a few features you can configure and some that need to be enabled first. Check out the <a target="_blank" rel="noopener" href="https://meilidu.github.io/">Demo</a> to see them all in action.</p>
-<h3 id="Widgets"><a href="#Widgets" class="headerlink" title="Widgets"></a>Widgets</h3><p>Add an array of all widgets you want to display in the footer in MeiliDus <code>_config.yml</code>. These should be the names of files in the <code>layout/_widgets</code> folder. A widget should always be wrapped in an <em>footer__element</em>, like such:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;footer__element&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>Hi there, <span class="tag">&lt;<span class="name">br</span> /&gt;</span>welcome to my Blog glad you found it. Have a look around, will you?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Read-more"><a href="#Read-more" class="headerlink" title="Read more"></a>Read more</h3><p>You can change the text of “read more” links by setting the <code>readMore</code> option in MeiliDus <code>_config.yml</code>.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">readMore:</span> <span class="string">...read</span> <span class="string">more</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>You can set the link to you RSS feed in MeiliDus <code>_config.yml</code>.</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">rss:</span> <span class="string">/atom.xml</span></span><br></pre></td></tr></table></figure>
-
-<p>You also need to install the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">feed generator</a> for this to work.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<p>Make sure to use the <code>--save</code> option and run this in the root folder of your repository as it won’t work otherwise.</p>
-<h3 id="Tags-page"><a href="#Tags-page" class="headerlink" title="Tags page"></a>Tags page</h3><p>To activate the tags page create a <code>source/tags/index.md</code> with the following content.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &quot;Tags&quot;</span><br><span class="line"><span class="section">layout: &quot;tags&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Categories-page"><a href="#Categories-page" class="headerlink" title="Categories page"></a>Categories page</h3><p>Activating the categories page is similar to tags, create a <code>source/categories/index.md</code> with the following content.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: &quot;Categories&quot;</span><br><span class="line"><span class="section">layout: &quot;categories&quot;</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="About-page"><a href="#About-page" class="headerlink" title="About page"></a>About page</h3><p>Like any other page create a folder with the name of the page and an <code>index.md</code> file in it to have an about page. The most basic about page in <code>source/about/index.md</code> might look like this.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: About</span><br><span class="line"><span class="section">layout: page</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">This is a page about pages. It is the mother of all pages and pageception.</span><br></pre></td></tr></table></figure>
-
-<h3 id="Archives"><a href="#Archives" class="headerlink" title="Archives"></a>Archives</h3><p>If you archive is only showing the current years posts try adding the following yml to your sites <code>_config.yml</code> (not the one in meilidus folder).</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><p>It can have any size really. It will always fill half of the screens height when the user first arrives on the page. Simply replace <code>meilidu/source/img/header.jpg</code> with your own file.</p>
-<p>The default header is from <a target="_blank" rel="noopener" href="https://unsplash.com/search/landscape%20mountain?photo=Ni4NgA64TFQ">unspalsh</a>, a picture by <a target="_blank" rel="noopener" href="https://unsplash.com/@albertorestifo">Alberto Restifo</a>.</p>
-<h3 id="Top-menu"><a href="#Top-menu" class="headerlink" title="Top menu"></a>Top menu</h3><p>To customize the menu at the top of the page simply change MeiliDus <code>_config.yml</code> and add your links to the <code>menu</code> object. Remove everything from it to hide the top menu.</p>
-<h1 id="Good-to-know"><a href="#Good-to-know" class="headerlink" title="Good to know"></a>Good to know</h1><h4 id="Absolute-URLs"><a href="#Absolute-URLs" class="headerlink" title="Absolute URLs"></a>Absolute URLs</h4><p>Hexo itself and the MeiliDu theme use a lot of absolute URLs (those starting with <code>/something</code>). Due to this you can only run your blog on a domain or subdomain but not as something like <code>domain.com/blog/</code>. To run a blog on GitHub check out <a target="_blank" rel="noopener" href="https://help.github.com/articles/user-organization-and-project-pages/">User pages</a> in the GitHub documentation.</p>
-<h4 id="Using-GitHub-to-host"><a href="#Using-GitHub-to-host" class="headerlink" title="Using GitHub to host"></a>Using GitHub to host</h4><p>You can host websites for free on GitHub. The <a target="_blank" rel="noopener" href="https://meilidu.github.io/">Demo for MeiliDu</a> is a great example of this. I use <a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis</a> to automate the generation of static files whenever we push to the master branch. Check out this <a target="_blank" rel="noopener" href="https://gist.github.com/HoverBaum/d11361337d2c59f0de591c9c9390c1a9">travis config file</a>, it comes with explanation on how to use it. Personally I found it easiest to have a repo that contains the blog (this one) and one that is only there to get the page going. Travis then gets the current version, generates all files and pushes to the website repo.</p>
-<h4 id="Why-an-Apple-showcase"><a href="#Why-an-Apple-showcase" class="headerlink" title="Why an Apple showcase???"></a>Why an Apple showcase???</h4><p>Because two minutes of googleing found this <a target="_blank" rel="noopener" href="http://www.pixeden.com/psd-web-elements/modern-psd-responsive-showcase">PSD showcase</a> so that is what I went with.</p>
-<h1 id="Blogs-using-MeiliDu"><a href="#Blogs-using-MeiliDu" class="headerlink" title="Blogs using MeiliDu"></a>Blogs using MeiliDu</h1><p>You are using MeiliDu for your blog? That is awesome! Let us know about it with a pull request and be featured here as an example for people to see how MeiliDu looks in the wild.</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="http://hoverbaum.gitlab.io/">HoverBaum</a></li>
-</ul>
-
-	
-
-	
-
-</article>
-
-
-
-
-	<article>
-	
-		<h1><a href="/2021/07/25/奥运会开幕式日记/">奥运会开幕式观感</a></h1>
-	
-	<div class="article__infos">
-		<span class="article__date">2021-07-25</span><br />
-		
-		
-	</div>
-
-	
-
-	
-		<h1 id="文章结构设计"><a href="#文章结构设计" class="headerlink" title="文章结构设计"></a>文章结构设计</h1><pre><code>*框架梳理* 总 - 分 - 总架构。
+八. 列表Markdown ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/07/25/%E5%A5%A5%E8%BF%90%E4%BC%9A%E5%BC%80%E5%B9%95%E5%BC%8F%E6%97%A5%E8%AE%B0/" title="奥运会开幕式观感">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="奥运会开幕式观感"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/07/25/%E5%A5%A5%E8%BF%90%E4%BC%9A%E5%BC%80%E5%B9%95%E5%BC%8F%E6%97%A5%E8%AE%B0/" title="奥运会开幕式观感">奥运会开幕式观感</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-07-25T06:02:22.000Z" title="Created 2021-07-25 14:02:22">2021-07-25</time></span></div><div class="content">文章结构设计*框架梳理* 总 - 分 - 总架构。
 
 关键点梳理： 
 1. 无人机1824架 ，
@@ -455,82 +201,15 @@
 3. 点火
 
 AT LAST：体现中国的强大和我内心浓厚的爱国情怀。
-</code></pre>
-<hr>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>2021年07月23日，我和爸爸妈妈一起观看了日本东京奥运会开幕式，我们打开电视的时候已经比较晚了，所以开头没看到，略微有一些遗憾。 东京奥运会原本应该与2020年开幕的因为新冠病毒疫情的影响导致延误到了今年，这是奥运会100多年以来第一次发生的。但是正如奥运会的精神，“更快，更高，更强” 人类不断的挑战自己，超越自己，我相信我们一定能战胜新冠病毒。  </p>
-<h2 id="本届开幕式我觉得有以下三大亮点："><a href="#本届开幕式我觉得有以下三大亮点：" class="headerlink" title="本届开幕式我觉得有以下三大亮点："></a>本届开幕式我觉得有以下三大亮点：</h2><ul>
-<li><ol>
-<li>1824架无人机构建的3D立体地球图像，并在群控无人机的技术下实现了各种动态的变化，这种视觉效果真是让人震撼无比，其中的科技技术充满了好奇，我立马问爸爸，“爸爸，爸爸！他们是怎么做到的，爸爸对我讲了很多知识点，比如群控技术，空间定位技术等等，我心中由衷的佩服哪些科技人员。<br><figure class="figure"><img src="https://img0.baidu.com/it/u=1294448726,4264705463&fm=253&fmt=auto&app=120&f=JPEG?w=690&h=460" alt="无人机1"><figcaption class="figure__caption">无人机1</figcaption></figure></li>
-</ol>
-</li>
-</ul>
-<p><figure class="figure"><img src="https://img1.baidu.com/it/u=146434171,3754539353&fm=253&fmt=auto&app=120&f=PNG?w=640&h=394" alt="无人机1"><figcaption class="figure__caption">无人机1</figcaption></figure></p>
-<ul>
-<li><ol start="2">
-<li>“超级变变变”是日本的综艺节目里非常有特色的节目，演员要在极短的时间里，配合音乐和道具在规定的时间节奏里完成33项体育运动LOGO图形的表演，这太有趣了。中间还有一个小插曲，有一个动作演员出现了失误没有接住道具，可以想象当时表演者承受多么大的压力呀，爸爸拍了一下大腿说：”这可是直播呀，太紧张了 太紧张了“。都说”台上一分钟，台下十年功“，要知道哪些演员一定是排练了无数次了。<br><figure class="figure"><img src="https://img2.baidu.com/it/u=1633423510,909783806&fm=253&fmt=auto&app=120&f=GIF?w=554&h=307"></figure></li>
-</ol>
-</li>
-</ul>
-<p><figure class="figure"><img src="https://img2.baidu.com/it/u=3021054336,3040319290&fm=253&fmt=auto&app=120&f=JPEG?w=898&h=500"></figure></p>
-<ul>
-<li><ol start="3">
-<li>最后就是最神圣庄严的奥运点火仪式，在体育场内奥运火炬通过一个一个的传递，最后到了一位扎着很多细细麻花辫的姐姐，只见姐姐手举火炬慢慢地走向了点火台，点火台的设计灵感是来源于日本富士山和太阳,你可以想象一下一个等腰梯形上面又一个圆圆的球形。只见姐姐手举火炬，迈着轻盈的步履款款而行登上了“富士山”，只见山顶球形“太阳”缓缓打开，如同花一样一层层绽放，从一颗圆圆地“太阳”一样的“种子”，到含苞待放的花蕾不断的“成长”，到最终完全盛开的“花”，只见姐姐举起火炬将火炬上燃烧的熊熊烈火慢慢伸向“花芯”，此刻我们都屏住呼吸死死地盯着屏幕，忽然那股火焰一下子窜的很高，在花芯处燃烧升华，巨大的花型火炬燃烧了起来，金黄色的奥运圣火如同富有生命一样翩翩起舞，她一定能焚尽世间一切邪恶和病毒。  </li>
-</ol>
-</li>
-</ul>
-<p><figure class="figure"><img src="https://img2.baidu.com/it/u=4162141946,3571948164&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=500" alt="圣火"><figcaption class="figure__caption">圣火</figcaption></figure></p>
-<p>虽然没有看到中国代表团进场，但是后面我也通过查阅资料了解到了中国代表团参赛人数有777人参加一共33项竞技比赛中的30个大项的比赛，这也成为了我本届奥运会开幕式的一种遗憾，人生总是在无数次遗憾中慢慢成长的也正是因为遗憾所以才更加难以忘怀。另外通过本次观看东京奥运会开幕我最大的收获就是让我看到了日本人富有超强想象力的设计创意和幽默感，那个超级变变变真实太有趣了，有机会我一定要和朋友们一起体验一下。  </p>
 
-	
+正文2021年07月23日，我和爸爸妈妈一起观看了日本东京奥运会开幕式，我们打开电视的时候已经比较晚了，所以开头没看到，略微有一些遗憾。 东京奥运会原本应该与2020年开幕的因为新冠病毒疫情的影响导致延误到了今年，这是奥运会100多年以来第一次发生的。但是正如奥运会的精神，“更快，更高，更强” 人类不断的挑战自己，超越自己，我相信我们一定能战胜新冠病毒。  
+本届开幕式我觉得有以下三大亮点：
 
-	
-
-</article>
+1824架无人机构建的3D立体地球图像，并在群控无人机的技术下实现了各种动态的变化，这种视觉效果真是让人震撼无比，其中的科技技术充满了好奇，我立马问爸爸，“爸爸，爸爸！他们是怎么做到的，爸爸对我讲了很多知识点，比如群控技术，空间定位技术等等，我心中由衷的佩服哪些科技人员。
 
 
 
 
 
 
-	<span class="different-posts">📕 end of posts 📕</span>
-
-
-	</main>
-
-	<footer class="footer">
-	<div class="footer-content">
-		
-	      <div class="footer__element">
-	<p>Hi there, <br />welcome to my Blog glad you found it. Have a look around, will you?</p>
-</div>
-
-	    
-	      <div class="footer__element">
-	<h5>Check out</h5>
-	<ul class="footer-links">
-		<li class="footer-links__link"><a href="/archives">Archive</a></li>
-		
-		  <li class="footer-links__link"><a href="/atom.xml">RSS</a></li>
-	    
-		<li class="footer-links__link"><a href="/about">about page</a></li>
-		<li class="footer-links__link"><a href="/tags">Tags</a></li>
-		<li class="footer-links__link"><a href="/categories">Categories</a></li>
-	</ul>
-</div>
-
-	    
-
-		<div class="footer-credit">
-			<span>© 2021 alongsoft | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/HoverBaum/meilidu-hexo">MeiliDu</a></span>
-		</div>
-
-	</div>
-
-
-</footer>
-
-
-
-</body>
-
-</html>
+“超级变变变”是日本的综艺节目里非常有特色的节目，演员要在极短的时间里，配合音乐和道具在规定的时间节奏里完成33项体育 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">alongsoft</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/26/Django_models/" title="Django Models 常用方法"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Django Models 常用方法"/></a><div class="content"><a class="title" href="/2021/07/26/Django_models/" title="Django Models 常用方法">Django Models 常用方法</a><time datetime="2021-07-26T08:47:00.000Z" title="Created 2021-07-26 16:47:00">2021-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/26/Django_QuerySet/" title="QuerySet常用方法"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="QuerySet常用方法"/></a><div class="content"><a class="title" href="/2021/07/26/Django_QuerySet/" title="QuerySet常用方法">QuerySet常用方法</a><time datetime="2021-07-25T17:56:00.000Z" title="Created 2021-07-26 01:56:00">2021-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/26/Django_ForeignKey/" title="Django - ForeignKey 用法"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Django - ForeignKey 用法"/></a><div class="content"><a class="title" href="/2021/07/26/Django_ForeignKey/" title="Django - ForeignKey 用法">Django - ForeignKey 用法</a><time datetime="2021-07-25T17:54:22.000Z" title="Created 2021-07-26 01:54:22">2021-07-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/25/2021.07.24/" title="涅槃重生 开篇"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="涅槃重生 开篇"/></a><div class="content"><a class="title" href="/2021/07/25/2021.07.24/" title="涅槃重生 开篇">涅槃重生 开篇</a><time datetime="2021-07-25T06:02:22.000Z" title="Created 2021-07-25 14:02:22">2021-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/25/%E5%A5%A5%E8%BF%90%E4%BC%9A%E5%BC%80%E5%B9%95%E5%BC%8F%E6%97%A5%E8%AE%B0/" title="奥运会开幕式观感"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="奥运会开幕式观感"/></a><div class="content"><a class="title" href="/2021/07/25/%E5%A5%A5%E8%BF%90%E4%BC%9A%E5%BC%80%E5%B9%95%E5%BC%8F%E6%97%A5%E8%AE%B0/" title="奥运会开幕式观感">奥运会开幕式观感</a><time datetime="2021-07-25T06:02:22.000Z" title="Created 2021-07-25 14:02:22">2021-07-25</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/python-Django/" style="font-size: 1.5em; color: #99a9bf">python,Django</a> <a href="/tags/word-Makedown/" style="font-size: 1.1em; color: #999">word,Makedown</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/07/"><span class="card-archive-list-date">July 2021</span><span class="card-archive-list-count">5</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-07-27T07:49:53.671Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By alongsoft</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
