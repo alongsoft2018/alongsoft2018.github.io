@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>崖墓</title>
+  <title>我的世界</title>
   
-  <subtitle>涅槃重生</subtitle>
+  <subtitle>方向-&gt;节奏-&gt;控制</subtitle>
   <link href="https://alongsoft2018.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://alongsoft2018.github.io.git/"/>
@@ -10,7 +10,7 @@
   <id>https://alongsoft2018.github.io.git/</id>
   
   <author>
-    <name>alongsoft</name>
+    <name>NPCS_AS</name>
     
   </author>
   
