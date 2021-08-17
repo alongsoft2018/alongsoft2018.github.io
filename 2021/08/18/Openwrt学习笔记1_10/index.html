@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="zh-Hans" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Openwrt学习笔记1_10 | 我的世界</title><meta name="keywords" content="openwrt,linux"><meta name="author" content="NPCS_AS"><meta name="copyright" content="NPCS_AS"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="cungudafa:在学习中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Openwrt学习笔记1_10">
+<meta property="og:url" content="https://alongsoft2018.github.io.git/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01_10/index.html">
+<meta property="og:site_name" content="我的世界">
+<meta property="og:description" content="cungudafa:在学习中">
+<meta property="og:locale">
+<meta property="og:image" content="https://openwrt.org/_media/logo.png">
+<meta property="article:published_time" content="2021-08-17T17:36:22.000Z">
+<meta property="article:modified_time" content="2021-08-17T17:38:35.494Z">
+<meta property="article:author" content="NPCS_AS">
+<meta property="article:tag" content="openwrt">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://openwrt.org/_media/logo.png"><link rel="shortcut icon" href="/img/npcs.jpeg"><link rel="canonical" href="https://alongsoft2018.github.io.git/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01_10/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Openwrt学习笔记1_10',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-08-18 01:38:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="我的世界" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar_max.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 收藏</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音樂</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://openwrt.org/_media/logo.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">我的世界</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 時間軸</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 收藏</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音樂</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 電影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友鏈</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Openwrt学习笔记1_10</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-08-17T17:36:22.000Z" title="Created 2021-08-18 01:36:22">2021-08-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-08-17T17:38:35.494Z" title="Updated 2021-08-18 01:38:35">2021-08-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Openwrt学习笔记1_10"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>[toc]</p>
+<h1 id="一、安装OPENWRT"><a href="#一、安装OPENWRT" class="headerlink" title="一、安装OPENWRT"></a>一、安装OPENWRT</h1><ul>
+<li><ol>
+<li>安装虚拟机，Virtualbox</li>
+</ol>
+</li>
+<li><ol>
+<li>安装Ubuntu 18.04 64位系统</li>
+</ol>
+</li>
+<li><ol>
+<li>安装开发环境，执行 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gcc g++ binutils patch bzip2 flex bison make autoconf gettext texinfo unzip sharutils libncurses5-dev ncurses-term zlib1g-dev gawk asciidoc libz-dev git-core uuid-dev libacl1-dev liblzo2-dev pkg-config libc6-dev curl libxml-parser-perl ocaml-nox</span><br><span class="line">apt-get update</span><br><span class="line">apt-get upgrade</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol>
+<li>下载OpenWrt源码，执行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://git.lede-project.org/source.git lede</span><br><span class="line">git clone https://github.com/openwrt/openwrt.git</span><br><span class="line">git clone https://git.openwrt.org/openwrt/openwrt.git</span><br></pre></td></tr></table></figure>
+<a target="_blank" rel="noopener" href="https://openwrt.org/docs/guide-developer/source-code/start">官方介绍</a></li>
+</ol>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://wesley.blog.csdn.net/article/details/118633847">参考</a></p>
+<ul>
+<li><ol>
+<li>下载好源代码后，更新源并添加（feeds是非官方的包）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./scripts/feeds update -a</span><br><span class="line">./scripts/feeds install -a</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@w:/home/openwrt/lede# ls</span><br><span class="line">BSDmakefile  COPYING             include   package    scripts      tmp</span><br><span class="line">config       feeds               LICENSES  README.md  staging_dir  toolchain</span><br><span class="line">Config.in    feeds.conf.default  Makefile  rules.mk   target       tools</span><br><span class="line">root@w:/home/openwrt/lede# cd scripts/</span><br><span class="line">root@w:/home/openwrt/lede/scripts# ls</span><br><span class="line">arm-magic.sh              ext-toolchain.sh             pad_image</span><br><span class="line">brcmImage.pl              feeds                        patch-kernel.sh</span><br><span class="line">bundle-libraries.sh       fixup-makefile.pl            patch-specs.sh</span><br><span class="line">cfe-bin-header.py         flashing                     portable_date.sh</span><br><span class="line">cfe-partition-tag.py      functions.sh                 qemustart</span><br><span class="line">cfe-wfi-tag.py            gen-dependencies.sh          redboot-script.pl</span><br><span class="line">checkpatch.pl             gen_image_generic.sh         relink-lib.sh</span><br><span class="line">cleanfile                 get_source_date_epoch.sh     remote-gdb</span><br><span class="line">clean-package.sh          getver.sh                    rstrip.sh</span><br><span class="line">cleanpatch                ipkg-build                   sercomm-crypto.py</span><br><span class="line">combined-ext-image.sh     ipkg-make-index.sh           sercomm-partition-tag.py</span><br><span class="line">combined-image.sh         ipkg-remove                  sercomm-payload.py</span><br><span class="line">config                    json_add_image_info.py       sign_images.sh</span><br><span class="line">config.guess              json_overview_image_info.py  size_compare.sh</span><br><span class="line">config.rpath              kconfig.pl                   slugimage.pl</span><br><span class="line">config.sub                linksys-image.sh             spelling.txt</span><br><span class="line">const_structs.checkpatch  make-ipkg-dir.sh             srecimage.pl</span><br><span class="line">deptest.sh                md5sum                       strip-kmod.sh</span><br><span class="line">diffconfig.sh             metadata.pm                  symlink-tree.sh</span><br><span class="line">dl_cleanup.py             mkhash.c                     sysupgrade-tar.sh</span><br><span class="line">dl_github_archive.py      mkits-qsdk-ipq-image.sh      target-metadata.pl</span><br><span class="line">download.pl               mkits.sh                     time.pl</span><br><span class="line">dump-target-info.pl       om-fwupgradecfg-gen.sh       timestamp.pl</span><br><span class="line">env                       package-metadata.pl          ubinize-image.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@w:/home/openwrt/lede/scripts# ./feeds --help</span><br><span class="line">Usage: ./feeds &lt;command&gt; [options]</span><br><span class="line"> </span><br><span class="line">Commands:</span><br><span class="line">    list [options]: List feeds, their content and revisions (if installed)</span><br><span class="line">    Options:</span><br><span class="line">        -n :            List of feed names.</span><br><span class="line">        -s :            List of feed names and their URL.</span><br><span class="line">        -r &lt;feedname&gt;:  List packages of specified feed.</span><br><span class="line">        -d &lt;delimiter&gt;: Use specified delimiter to distinguish rows (default: spaces)</span><br><span class="line">        -f :            List feeds in feeds.conf compatible format (when using -s).</span><br><span class="line"> </span><br><span class="line">    install [options] &lt;package&gt;: Install a package</span><br><span class="line">    Options:</span><br><span class="line">        -a :           Install all packages from all feeds or from the specified feed using the -p option.</span><br><span class="line">        -p &lt;feedname&gt;: Prefer this feed when installing packages.</span><br><span class="line">        -d &lt;y|m|n&gt;:    Set default for newly installed packages.</span><br><span class="line">        -f :           Install will be forced even if the package exists in core OpenWrt (override)</span><br><span class="line"> </span><br><span class="line">    search [options] &lt;substring&gt;: Search for a package</span><br><span class="line">    Options:</span><br><span class="line">        -r &lt;feedname&gt;: Only search in this feed</span><br><span class="line"> </span><br><span class="line">    uninstall -a|&lt;package&gt;: Uninstall a package</span><br><span class="line">    Options:</span><br><span class="line">        -a :           Uninstalls all packages.</span><br><span class="line"> </span><br><span class="line">    update -a|&lt;feedname(s)&gt;: Update packages and lists of feeds in feeds.conf .</span><br><span class="line">    Options:</span><br><span class="line">        -a :           Update all feeds listed within feeds.conf. Otherwise the specified feeds will be updated.</span><br><span class="line">        -i :           Recreate the index only. No feed update from repository is performed.</span><br><span class="line">        -f :           Force updating feeds even if there are changed, uncommitted files.</span><br><span class="line"> </span><br><span class="line">    clean:             Remove downloaded/generated files.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><ol>
+<li>查看源代码是否下载成功 make menuconfig</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<pre><code>- 1). 选择 CPU 型号 Target System -&gt; Ralink RT288x/RT3xxx
+
+- 2). 选择 CPU 子型号 Subtarget -&gt; RT3x5x/RT5350 based boards
+
+- 3). 选择具体路由器型号 Target profile -&gt; HAME-MPR-A2 
+</code></pre><blockquote>
+<ul>
+<li><ol>
+<li>编译系统 make V=99</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<pre><code>- 1、lzo安装
+        1)、 wget http://www.oberhumer.com/opensource/lzo/download/lzo-2.06.tar.gz
+        2)、 tar xzvf lzo-2.06.tar.gz 
+        3)、 cd lzo-2.06
+                ./configure CPPFLAGS=&quot;$CPPFLAGS -std=c90 -fPIC&quot;
+                make
+                make install
+- 2、lzop安装：
+        1)、wget &#39;http://www.lzop.org/download/lzop-1.03.tar.gz&#39;
+        2)、tar xzvf lzop-1.03.tar.gz 
+        3)、cd lzop-1.03
+                ./configure CPPFLAGS=&quot;$CPPFLAGS -std=c90 -fPIC&quot;
+                make
+                make install
+ -3   make -j1 V=s
+</code></pre><ul>
+<li>替换成中科大源<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">root@w:/home/openwrt/lede# vim /etc/apt/sources.list</span><br><span class="line">root@w:/home/openwrt/lede# cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line">root@w:/home/openwrt/lede# vim /etc/apt/sources.list</span><br><span class="line">root@w:/home/openwrt/lede# cat /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">##中科大源</span><br><span class="line"> </span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
+<h1 id="二、Uboot下升级FW（MTK）"><a href="#二、Uboot下升级FW（MTK）" class="headerlink" title="二、Uboot下升级FW（MTK）"></a>二、Uboot下升级FW（MTK）</h1>常用芯片：bcm(CFE),qca + MTK(uboot).</li>
+</ul>
+<p>QCA的uboot分为kernel 与 rootfs，分别升级</p>
+<p>MTK：只有一个打包好的独立的bin文件</p>
+<ul>
+<li>• 在路由器主板上焊接TTL引脚，准备USB-TTL数据线一条（使用时，一般把红色的电源线剪掉，避免将板子烧坏）</li>
+<li>• 安装串口、 tftpd 工具<ul>
+<li><ul>
+<li>• ubuntu下采用minicom、tftpd - hpa</li>
+</ul>
+</li>
+<li><ul>
+<li>• win下可以使用putty、tftpd32/64</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>• 虚拟机的设置<ul>
+<li><ul>
+<li>• 虚拟机 USB 共享（串口）</li>
+</ul>
+</li>
+<li><ul>
+<li>• 调整虚拟机的网卡设置，增加网卡然后设置为桥接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>• lsusb<br><img src="https://img-blog.csdnimg.cn/20210711084735345.png" alt="image"><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">apt-get install minicom</span><br></pre></td></tr></table></figure>
+<strong>minicom -s 设定minicom，串口波特率</strong><br><img src="https://img-blog.csdnimg.cn/20210711090845832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br><a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/TFTP">TFTP</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tftpd-hpa</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">w@w:~$ sudo cp /etc/default/tftpd-hpa /etc/default/tftpd-hpa.ORIGINAL</span><br><span class="line">w@w:~$ sudo vi /etc/default/tftpd-hpa</span><br><span class="line">w@w:~$ sudo cat /etc/default/tftpd-hpa</span><br><span class="line"># /etc/default/tftpd-hpa</span><br><span class="line"> </span><br><span class="line">TFTP_USERNAME=&quot;tftp&quot;</span><br><span class="line">#TFTP_DIRECTORY=&quot;/var/lib/tftpboot&quot;</span><br><span class="line">TFTP_DIRECTORY=&quot;/tftpboot&quot;</span><br><span class="line">TFTP_ADDRESS=&quot;:69&quot;</span><br><span class="line">TFTP_OPTIONS=&quot;--secure --create&quot;</span><br><span class="line">#w@w:~$ sudo chown -R tftp /var/lib/tftpboot</span><br><span class="line">w@w:~$ sudo mkdir /tftpboot</span><br><span class="line">w@w:~$ sudo chown -R tftp /tftpboot</span><br><span class="line">w@w:~$ sudo service tftpd-hpa restart</span><br><span class="line">#w@w:~$ sudo chmod -R 777 /var/lib/tftpboot</span><br><span class="line">w@w:~$ sudo chmod -R 777 /tftpboot</span><br><span class="line">#w@w:~$ cd /var/lib/tftpboot</span><br><span class="line">#w@w:/var/lib/tftpboot$ ls</span><br><span class="line">#w@w:/var/lib/tftpboot$ touch abc</span><br><span class="line">#w@w:/var/lib/tftpboot$ ls</span><br><span class="line">#abc</span><br><span class="line">w@w:~$ cd /tftpboot</span><br><span class="line">w@w:/tftpboot$ ls</span><br><span class="line">w@w:/tftpboot$ touch abc</span><br><span class="line">w@w:/tftpboot$ ls</span><br><span class="line">abc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>验证tftp文件下载 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">w@w:~$ sudo apt-get install tftp</span><br><span class="line">w@w:~/Downloads$ tftp</span><br><span class="line">tftp&gt; connect 127.0.0.1</span><br><span class="line">tftp&gt; binary</span><br><span class="line">tftp&gt; timeout 1000</span><br><span class="line">tftp&gt; get abc</span><br><span class="line">tftp&gt; quit</span><br><span class="line">w@w:~/Downloads$ ls</span><br></pre></td></tr></table></figure>
+<img src="https://img-blog.csdnimg.cn/20210711094646518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">w@w:~$ ifconfig</span><br><span class="line">enp0s3: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255</span><br><span class="line">        inet6 fe80::3d0d:2671:dc77:f7d2  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 08:00:27:24:17:2c  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 1353  bytes 1536902 (1.5 MB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 546  bytes 49231 (49.2 KB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"> </span><br><span class="line">enp0s8: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet6 fe80::2b70:85ef:ab5f:311c  prefixlen 64  scopeid 0x20&lt;link&gt;</span><br><span class="line">        ether 08:00:27:f5:fe:b9  txqueuelen 1000  (Ethernet)</span><br><span class="line">        RX packets 0  bytes 0 (0.0 B)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 107  bytes 18564 (18.5 KB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line"> </span><br><span class="line">lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536</span><br><span class="line">        inet 127.0.0.1  netmask 255.0.0.0</span><br><span class="line">        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;</span><br><span class="line">        loop  txqueuelen 1000  (Local Loopback)</span><br><span class="line">        RX packets 156  bytes 13373 (13.3 KB)</span><br><span class="line">        RX errors 0  dropped 0  overruns 0  frame 0</span><br><span class="line">        TX packets 156  bytes 13373 (13.3 KB)</span><br><span class="line">        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</span><br><span class="line">w@w:~$ ifconfig enp0s38 10.10.10.3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动，进入uboot<br><img src="https://img-blog.csdnimg.cn/20210711095523135.png" alt="image"><br><img src="https://img-blog.csdnimg.cn/2021071110021746.png" alt="image"><br><img src="https://img-blog.csdnimg.cn/2021071110010884.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br><img src="https://img-blog.csdnimg.cn/20210711100519973.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></li>
+</ul>
+<h1 id="三、编译环境目录结构分析"><a href="#三、编译环境目录结构分析" class="headerlink" title="三、编译环境目录结构分析"></a>三、编译环境目录结构分析</h1><p>OpenWrt基于Buld Root,</p>
+<p>OpenWrt代码：脚本+文件，只有make编译的时候才会下载代码</p>
+<ol>
+<li><p>tool chain</p>
+</li>
+<li><p>build程序 kernel + rootfs文件（程序）</p>
+</li>
+<li><p>创建rootfs（库+程序）glibc，openssl</p>
+</li>
+<li><p>创建image（kernel+rootfs《squashfs，ramfs》）</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/2021071110422022.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<p>make的时候产生的目录</p>
+<p>dl：下载的code</p>
+<p>staging_dir 交叉编译工具链</p>
+<p>feeds ：第三方package</p>
+<p>build_dir:文件系统rootfs，程序，kernel等</p>
+<p>bin：fw，package/target</p>
+<p>先产生先下载tool dl，然后交叉编译工具链staging_dir，然后产生build_dir，再产生bin</p>
+<h1 id="四、路由器启动过程分析"><a href="#四、路由器启动过程分析" class="headerlink" title="四、路由器启动过程分析"></a>四、路由器启动过程分析</h1><ol>
+<li><p>硬件上电，CPU进行复位（CPU内部硬件复位非软件/系统层面的配置）—&gt; 选择启动介质，SPI Flash/NAND Flash（bootstrap，一般有电阻，设定从SPI启动还是NAND启动，硬件实现）</p>
+</li>
+<li><p>Bootloader启动，选择从SPI/NAND中的某个image启动（4-8M SPI</p>
+<p>Bootloader, NAND 128M bootloader+image）,比如SPI中刷DD-WRT，NAND中刷梅林</p>
+</li>
+</ol>
+<p>一般，有单独SPI，单独NAND，SPI+NAND ，Dual image四种</p>
+<ol>
+<li>系统启动OpenWRT/DD-WRT/Tomato</li>
+</ol>
+<hr>
+<ol>
+<li><p>上的，CPU简单初始化</p>
+</li>
+<li><p>Boot-loader阶段，CPU在此次init初始化，外设（串口，网口Phy，Switch,USB，Memory…），</p>
+</li>
+<li><p>系统运行，CPU再次init，外设。。。，PCIe总线，无线网卡</p>
+</li>
+</ol>
+<h1 id="五、make-meconfig菜单分析"><a href="#五、make-meconfig菜单分析" class="headerlink" title="五、make meconfig菜单分析"></a>五、make meconfig菜单分析</h1><p><img src="https://img-blog.csdnimg.cn/2021071113011526.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<h1 id="六、目录结构分析"><a href="#六、目录结构分析" class="headerlink" title="六、目录结构分析"></a>六、目录结构分析</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">w@w:/home/openwrt$ ls</span><br><span class="line">BSDmakefile  COPYING             include   README.md    target</span><br><span class="line">build_dir    dl                  LICENSES  rules.mk     tmp</span><br><span class="line">config       feeds               Makefile  scripts      toolchain</span><br><span class="line">Config.in    feeds.conf.default  package   staging_dir  tools</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><p>1)find命令是根据文件的属性进行查找，如文件名，文件大小，所有者，所属组，是否为空，访问时间，修改时间等。 </p>
+</li>
+<li><p>2)grep是根据文件的内容进行查找，会对文件的每一行按照给定的模式(patter)进行匹配查找。</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>　<strong>一.find命令</strong><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">　　　　基本格式：find  path expression</span><br><span class="line"></span><br><span class="line">　　　　1.按照文件名查找</span><br><span class="line"></span><br><span class="line">　　　　(1)find / -name httpd.conf　　#在根目录下查找文件httpd.conf，表示在整个硬盘查找</span><br><span class="line">　　　　(2)find /etc -name httpd.conf　　#在/etc目录下文件httpd.conf</span><br><span class="line">　　　　(3)find /etc -name &#x27;*srm*&#x27;　　#使用通配符*(0或者任意多个)。表示在/etc目录下查找文件名中含有字符串‘srm’的文件</span><br><span class="line">　　　　(4)find . -name &#x27;srm*&#x27; 　　#表示当前目录下查找文件名开头是字符串‘srm’的文件</span><br><span class="line"></span><br><span class="line">　　　　2.按照文件特征查找 　　　　</span><br><span class="line"></span><br><span class="line">　　　　(1)find / -amin -10 　　# 查找在系统中最后10分钟访问的文件(access time)</span><br><span class="line">　　　　(2)find / -atime -2　　 # 查找在系统中最后48小时访问的文件</span><br><span class="line">　　　　(3)find / -empty 　　# 查找在系统中为空的文件或者文件夹</span><br><span class="line">　　　　(4)find / -group cat 　　# 查找在系统中属于 group为cat的文件</span><br><span class="line">　　　　(5)find / -mmin -5 　　# 查找在系统中最后5分钟里修改过的文件(modify time)</span><br><span class="line">　　　　(6)find / -mtime -1 　　#查找在系统中最后24小时里修改过的文件</span><br><span class="line">　　　　(7)find / -user fred 　　#查找在系统中属于fred这个用户的文件</span><br><span class="line">　　　　(8)find / -size +10000c　　#查找出大于10000000字节的文件(c:字节，w:双字，k:KB，M:MB，G:GB)</span><br><span class="line">　　　　(9)find / -size -1000k 　　#查找出小于1000KB的文件</span><br><span class="line"></span><br><span class="line">　　　　3.使用混合查找方式查找文件</span><br><span class="line"></span><br><span class="line">　　　　参数有： ！，-and(-a)，-or(-o)。</span><br><span class="line"></span><br><span class="line">(1)find /tmp -size +10000c -and -mtime +2 　　#在/tmp目录下查找大于10000字节并在最后2分钟内修改的文件</span><br><span class="line">(2)find / -user fred -or -user george 　　#在/目录下查找用户是fred或者george的文件文件</span><br><span class="line">(3)find /tmp ! -user panda　　#在/tmp目录中查找所有不属于panda用户的文件</span><br><span class="line">    　　  </span><br></pre></td></tr></table></figure></li>
+<li><strong>二、grep命令</strong></li>
+</ul>
+<p>　　　  基本格式：find  expression</p>
+<p> 　　　 1.主要参数<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">　　　　[options]主要参数：</span><br><span class="line">　　　　－c：只输出匹配行的计数。</span><br><span class="line">　　　　－i：不区分大小写</span><br><span class="line">　　　　－h：查询多文件时不显示文件名。</span><br><span class="line">　　　　－l：查询多文件时只输出包含匹配字符的文件名。</span><br><span class="line">　　　　－n：显示匹配行及行号。</span><br><span class="line">　　　　－s：不显示不存在或无匹配文本的错误信息。</span><br><span class="line">　　　　－v：显示不包含匹配文本的所有行。</span><br><span class="line"></span><br><span class="line">　　　　pattern正则表达式主要参数：</span><br><span class="line">　　　　\： 忽略正则表达式中特殊字符的原有含义。</span><br><span class="line">　　　　^：匹配正则表达式的开始行。</span><br><span class="line">　　　　$: 匹配正则表达式的结束行。</span><br><span class="line">　　　　\&lt;：从匹配正则表达 式的行开始。</span><br><span class="line">　　　　\&gt;：到匹配正则表达式的行结束。</span><br><span class="line">　　　　[ ]：单个字符，如[A]即A符合要求 。</span><br><span class="line">　　　　[ - ]：范围，如[A-Z]，即A、B、C一直到Z都符合要求 。</span><br><span class="line">　　　　.：所有的单个字符。</span><br><span class="line">　　　　* ：有字符，长度可以为0。</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>2.实例　 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* (1)grep &#x27;test&#x27; d*　　     #显示所有以d开头的文件中包含 test的行</span><br><span class="line">* (2)grep ‘test’ aa bb cc #显示在aa，bb，cc文件中包含test的行</span><br><span class="line">* (3)grep ‘[a-z]\&#123;5\&#125;’ aa #显示所有包含每行字符串至少有5个连续小写字符的字符串的行</span><br><span class="line">* (4)grep magic /usr/src　  #显示/usr/src目录下的文件(不含子目录)包含magic的行</span><br><span class="line">* (5)grep -r magic /usr/src #显示/usr/src目录下的文件(包含子目录)包含magic的行</span><br><span class="line">* (6)grep -w pattern files  #只匹配整个单词，而不是字符串的一部分(如匹配’magic’，而不是’magical’)，</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/end/archive/2012/02/21/2360965.html">详细使用参见</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/EasonJim/p/8425840.html">OpenWrt包管理软件opkg的使用（极路由）</a></p>
+<ul>
+<li>说明：</li>
+</ul>
+<blockquote>
+<p>1、OpenWrt本身系统没什么问题，关键点是一些路由器尝试的限制，比如一些厂商设置成内存分区为只读，那么这个安装软件就变得没什么意义了。</p>
+<p>2、opkg的操作有点反人类，正常步骤是查询，安装；而opkg在一些厂商的限制下需要update，然后download，最后install；且有时会安装在tmp区，重启会没有。</p>
+</blockquote>
+<ul>
+<li><p>常用安装步骤：</p>
+<p>如果想要安装一个软件，但是不知道什么具体的名字，可以用命令获取到软件包的名字(opkg list | grep 软件名)，然后安装，比如想要安装tftp</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># opkg list | grep tftpd</span><br><span class="line">atftpd - 0.7-1 - TFTP server</span><br><span class="line">iputils-tftpd - 20101006-1 - Program tftpd from iputils Trivial File Transfer Protocol server.</span><br><span class="line">tftpd-hpa - 0.48-3 - An enhanced version of the BSD TFTP server</span><br><span class="line">通过上面的命令我找到我想要的tftp服务器的名字为tftpd-hpa，这样就可以先用</span><br><span class="line"></span><br><span class="line"># opkg download tftpd-hpa</span><br><span class="line">下载软件包，然后用</span><br><span class="line"></span><br><span class="line"># opkg install tftpd-hpa</span><br><span class="line">来安装。也可以直接用 </span><br><span class="line"></span><br><span class="line"># opkg install tftpd-hpa</span><br><span class="line">会直接先下载再自动安装。</span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://wiki.openwrt.org/zh-cn/doc/techref/opkg">1</a><br><a target="_blank" rel="noopener" href="http://www.openwrtdl.com/wordpress/openwrt-install-software">2</a></p>
+<h1 id="七、LAN-WAN-Bridge-VLAN基本概念"><a href="#七、LAN-WAN-Bridge-VLAN基本概念" class="headerlink" title="七、LAN/WAN/Bridge/VLAN基本概念"></a>七、LAN/WAN/Bridge/VLAN基本概念</h1><p><img src="https://img-blog.csdnimg.cn/20210712154205742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br><img src="https://img-blog.csdnimg.cn/20210712154954911.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br><img src="https://img-blog.csdnimg.cn/20210712160958685.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<h1 id="八、OpenWRT常用命令"><a href="#八、OpenWRT常用命令" class="headerlink" title="八、OpenWRT常用命令"></a>八、OpenWRT常用命令</h1><ul>
+<li><p>1.文件类、目录类命令：cd cat rm touch mkdir ls mv grep</p>
+</li>
+<li><p>2.文本编辑器命令: vi</p>
+</li>
+<li><p>3.权限类命令: chmod</p>
+</li>
+<li><p>4.模块命令:rmmod insmod modprobe lsmod</p>
+</li>
+<li><p>5.进程管理命令:ps top kill killall</p>
+</li>
+<li><p>6.文件下载上传工具: scp wget tftp</p>
+</li>
+<li><p>7.系统命令:mount dmesg reboot chpasswd data time du df</p>
+</li>
+<li><p>8.网络类命令:ifconfig arp route iptables netstat</p>
+</li>
+<li><p>9.OpenWrt专用命令:sysupgrade opkg</p>
+</li>
+</ul>
+<h1 id="九、交叉编译工具链"><a href="#九、交叉编译工具链" class="headerlink" title="九、交叉编译工具链"></a>九、交叉编译工具链</h1><p><img src="https://img-blog.csdnimg.cn/20210712205751521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<blockquote>
+<p><strong>打开~/.bashrc文件最末添加命令</strong></p>
+</blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20210713111901984.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<blockquote>
+<p><strong>Makefile的功能：configure/compile/install/clean</strong></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* main.c */ </span><br><span class="line"> </span><br><span class="line">#include &quot;mytool1.h&quot;  </span><br><span class="line">#include &quot;mytool2.h&quot; </span><br><span class="line"> </span><br><span class="line">int main(int argc，char **argv) </span><br><span class="line">&#123; </span><br><span class="line"> mytool1_print(&quot;hello&quot;)； </span><br><span class="line"> mytool2_print(&quot;hello&quot;)； </span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">/* mytool1.h */ </span><br><span class="line"> </span><br><span class="line">#ifndef _MYTOOL_1_H </span><br><span class="line">#define _MYTOOL_1_H </span><br><span class="line"> </span><br><span class="line">void mytool1_print(char *print_str)； </span><br><span class="line">#endif </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">/* mytool1.c */ </span><br><span class="line"> </span><br><span class="line">#include &quot;mytool1.h&quot; </span><br><span class="line"> </span><br><span class="line">void mytool1_print(char *print_str) </span><br><span class="line"> &#123; </span><br><span class="line"> printf(&quot;This is mytool1 print %s &quot;，print_str)； </span><br><span class="line"> &#125; </span><br><span class="line"> </span><br><span class="line">  </span><br><span class="line">/* mytool2.h */ </span><br><span class="line">  </span><br><span class="line">#ifndef _MYTOOL_2_H </span><br><span class="line">#define _MYTOOL_2_H </span><br><span class="line">  </span><br><span class="line">void mytool2_print(char *print_str)； </span><br><span class="line"> </span><br><span class="line">#endif </span><br><span class="line">  </span><br><span class="line"> </span><br><span class="line">/* mytool2.c */ </span><br><span class="line"> #include &quot;mytool2.h&quot; </span><br><span class="line"> </span><br><span class="line"> void mytool2_print(char *print_str) </span><br><span class="line"> &#123; </span><br><span class="line"> printf(&quot;This is mytool2 print %s &quot;，print_str)； </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gcc -c main.c </span><br><span class="line">gcc -c mytool1.c</span><br><span class="line">gcc -c mytool2.c </span><br><span class="line">gcc -o main main.o mytool1.o mytool2.o</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main：main.o mytool1.o mytool2.o </span><br><span class="line">gcc -o main main.o mytool1.o mytool2.o </span><br><span class="line"> </span><br><span class="line">main.o：main.c mytool1.h mytool2.h </span><br><span class="line">gcc -c main.c </span><br><span class="line">  </span><br><span class="line">mytool1.o：mytool1.c mytool1.h </span><br><span class="line">gcc -c mytool1.c </span><br><span class="line">  </span><br><span class="line">mytool2.o：mytool2.c mytool2.h </span><br><span class="line">gcc -c mytool2.c</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">有了这个Makefile文件，不论我们什么时候修改了源程序当中的什么文件，我们只要执行make命令，我们的编译器都只会去编译和我们修改的文件有关的文件，其它的文件它连理都不想去理的。 </span><br><span class="line"> </span><br><span class="line">下面我们学习Makefile是如何编写的。 </span><br><span class="line"> </span><br><span class="line">在Makefile中也#开始的行都是注释行.Makefile中最重要的是描述文件的依赖关系的说明。一般的格式是： </span><br><span class="line">target：components </span><br><span class="line">TAB rule </span><br><span class="line"> </span><br><span class="line">第一行表示的是依赖关系。第二行是规则。 </span><br><span class="line"> </span><br><span class="line">比如说我们上面的那个Makefile文件的第二行。 </span><br><span class="line">main：main.o mytool1.o mytool2.o </span><br><span class="line"> </span><br><span class="line">表示我们的目标(target)main的依赖对象(components)是main.o mytool1.omytool2.o 当倚赖的对象在目标修改后修改的话，就要去执行规则一行所指定的命令。就象我们的上面那个Makefile第三行所说的一样要执行 gcc-o main main.o mytool1.o mytool2.o 注意规则一行中的TAB表示那里是一个TAB键 </span><br><span class="line"> </span><br><span class="line">Makefile有三个非常有用的变量。分别是$@，$^，$&lt;代表的意义分别是： </span><br><span class="line"> </span><br><span class="line">$@--目标文件，$^--所有的依赖文件，$&lt;--第一个依赖文件。 </span><br><span class="line"> </span><br><span class="line">如果我们使用上面三个变量，那么我们可以简化我们的Makefile文件为： </span><br><span class="line"> </span><br><span class="line"># 这是简化后的Makefile </span><br><span class="line"> </span><br><span class="line">main：main.o mytool1.o mytool2.o </span><br><span class="line"> </span><br><span class="line">gcc -o $@ $^        //此处$@代表main，$^ 代表所有的依赖 main.o mytool1.o mytool2.o </span><br><span class="line"> </span><br><span class="line">main.o：main.c mytool1.h mytool2.h </span><br><span class="line"> </span><br><span class="line">gcc -c $&lt; </span><br><span class="line"> </span><br><span class="line">mytool1.o：mytool1.c mytool1.h </span><br><span class="line"> </span><br><span class="line">gcc -c $&lt; </span><br><span class="line"> </span><br><span class="line">mytool2.o：mytool2.c mytool2.h </span><br><span class="line"> </span><br><span class="line">gcc -c $&lt; </span><br><span class="line"> </span><br><span class="line">经过简化后,我们的Makefile是简单了一点，不过人们有时候还想简单一点。这里我们学习一个Makefile的缺省规则 </span><br><span class="line"> </span><br><span class="line">.c.o： </span><br><span class="line"> </span><br><span class="line">gcc -c $&lt; </span><br><span class="line"> </span><br><span class="line">这个规则表示所有的 .o文件都是依赖与相应的.c文件的。例如mytool.o依赖于mytool.c这样Makefile还可以变为： </span><br><span class="line"> </span><br><span class="line"># 这是再一次简化后的Makefile </span><br><span class="line"> </span><br><span class="line">main：main.o mytool1.o mytool2.o </span><br><span class="line"> </span><br><span class="line">gcc -o $@ $^ </span><br><span class="line"> </span><br><span class="line">.c.o： </span><br><span class="line"> </span><br><span class="line">gcc -c $&lt; </span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20210713211541124.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<h1 id="十、Flash布局"><a href="#十、Flash布局" class="headerlink" title="十、Flash布局"></a>十、Flash布局</h1><blockquote>
+<p><strong>常见文件系统，ext3/ext4 磁盘文件系统，tmp</strong><br><img src="https://img-blog.csdnimg.cn/20210712212123306.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br>Flash布局:最下面是uboot/CFE，再往上是固件（sys upgrade.bin, 一般是通过mk image工具生成的），在jffs2一般就是overlay分区</p>
+</blockquote>
+<p>Overlay的系统，一般都是只读分区，加一个可写的jffs2分区构成。</p>
+<p>固件的大小变化，会导致jffs2分区不停的左右移动，格式化。</p>
+<p>固件有固件头，上面是kernel，再向上是只读的rootfs/squashfs。 squashfs是压缩的，只读。一般写/删除文件都是在jffs2分区操作。为了尽量降低flash写的消耗，采用overlay机制。</p>
+<p>Jffs2是可写的分区，一般是overlay的，比如叠加在制度的squashfs上面。<br><img src="https://img-blog.csdnimg.cn/20210712212712138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br>squashfs挂载到/rom目录</p>
+<p>jffs2分区挂载到/overlay目录</p>
+<p>通过overlayfs让overlay目录成为根目录/</p>
+<p>tempfs 用于存放临时文件，放置到内存中。如果不限制log大小，进行定时存储，容易丢失log</p>
+<p> ext2/3 用于给硬盘使用。openwrt使用该文件系统，意外断电会导致ext文件系统奔溃，因为意外断电会丢掉inode</p>
+<p>flash设备有坏块的概念，采用overlay的概念保护存储介质<br><img src="https://img-blog.csdnimg.cn/20210712213428554.png" alt="image"><br>固件，就是固件头+内核+rootfs 合在一起，通过mk image工具合在一起</p>
+<p> rootfs是一个squash文件，root.squashfs, 通过file命令查看squash文件的细节<br> <img src="https://img-blog.csdnimg.cn/20210712212946140.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br> 固件是标准的格式，这也是为什么有些android固件被解包，下面是用ghex打开root.squashfs看到的头信息，该文件没有终止符<br> <img src="https://img-blog.csdnimg.cn/20210712213157360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+<ul>
+<li><p>下面是用ghex打开打包好的.bin的固件，发现有终止符DEADC0DE</p>
+<p><img src="https://img-blog.csdnimg.cn/20210712213223547.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"><br><img src="https://img-blog.csdnimg.cn/20210712213402351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2YyMTU3MTIw,size_16,color_FFFFFF,t_70" alt="image"></p>
+</li>
+</ul>
+<p>终止符DEADC0DE</p>
+<p>以上用ghex工具进行打开</p>
+<p>apt-get install ghex</p>
+<p>通过终止符判断固件的大小</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">NPCS_AS</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://alongsoft2018.github.io.git/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01_10/">https://alongsoft2018.github.io.git/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01_10/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/openwrt/">openwrt</a><a class="post-meta__tags" href="/tags/linux/">linux</a></div><div class="post_share"><div class="social-share" data-image="https://openwrt.org/_media/logo.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> Donate</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/npcs.jpeg" target="_blank"><img class="post-qr-code-img" src="/img/npcs.jpeg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011_20/"><img class="prev-cover" src="https://openwrt.org/_media/logo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Openwrt学习笔记11_20</div></div></a></div><div class="next-post pull-right"><a href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021_30/"><img class="next-cover" src="https://openwrt.org/_media/logo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Openwrt学习笔记21_30</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/08/18/Openwrt学习笔记11_20/" title="Openwrt学习笔记11_20"><img class="cover" src="https://openwrt.org/_media/logo.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-18</div><div class="title">Openwrt学习笔记11_20</div></div></a></div><div><a href="/2021/08/18/Openwrt学习笔记21_30/" title="Openwrt学习笔记21_30"><img class="cover" src="https://openwrt.org/_media/logo.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-18</div><div class="title">Openwrt学习笔记21_30</div></div></a></div><div><a href="/2021/08/18/Openwrt学习笔记31_45/" title="Openwrt学习笔记31_45"><img class="cover" src="https://openwrt.org/_media/logo.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-18</div><div class="title">Openwrt学习笔记31_45</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar_max.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">NPCS_AS</div><div class="author-info__description">ABC</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85OPENWRT"><span class="toc-number">1.</span> <span class="toc-text">一、安装OPENWRT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Uboot%E4%B8%8B%E5%8D%87%E7%BA%A7FW%EF%BC%88MTK%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">二、Uboot下升级FW（MTK）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="toc-number">3.</span> <span class="toc-text">三、编译环境目录结构分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%B7%AF%E7%94%B1%E5%99%A8%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">4.</span> <span class="toc-text">四、路由器启动过程分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81make-meconfig%E8%8F%9C%E5%8D%95%E5%88%86%E6%9E%90"><span class="toc-number">5.</span> <span class="toc-text">五、make meconfig菜单分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="toc-number">6.</span> <span class="toc-text">六、目录结构分析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81LAN-WAN-Bridge-VLAN%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">7.</span> <span class="toc-text">七、LAN&#x2F;WAN&#x2F;Bridge&#x2F;VLAN基本概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81OpenWRT%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">8.</span> <span class="toc-text">八、OpenWRT常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="toc-number">9.</span> <span class="toc-text">九、交叉编译工具链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E3%80%81Flash%E5%B8%83%E5%B1%80"><span class="toc-number">10.</span> <span class="toc-text">十、Flash布局</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031_45/" title="Openwrt学习笔记31_45"><img src="https://openwrt.org/_media/logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Openwrt学习笔记31_45"/></a><div class="content"><a class="title" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B031_45/" title="Openwrt学习笔记31_45">Openwrt学习笔记31_45</a><time datetime="2021-08-17T17:41:22.000Z" title="Created 2021-08-18 01:41:22">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011_20/" title="Openwrt学习笔记11_20"><img src="https://openwrt.org/_media/logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Openwrt学习笔记11_20"/></a><div class="content"><a class="title" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B011_20/" title="Openwrt学习笔记11_20">Openwrt学习笔记11_20</a><time datetime="2021-08-17T17:36:22.000Z" title="Created 2021-08-18 01:36:22">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01_10/" title="Openwrt学习笔记1_10"><img src="https://openwrt.org/_media/logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Openwrt学习笔记1_10"/></a><div class="content"><a class="title" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01_10/" title="Openwrt学习笔记1_10">Openwrt学习笔记1_10</a><time datetime="2021-08-17T17:36:22.000Z" title="Created 2021-08-18 01:36:22">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021_30/" title="Openwrt学习笔记21_30"><img src="https://openwrt.org/_media/logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Openwrt学习笔记21_30"/></a><div class="content"><a class="title" href="/2021/08/18/Openwrt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B021_30/" title="Openwrt学习笔记21_30">Openwrt学习笔记21_30</a><time datetime="2021-08-17T17:36:22.000Z" title="Created 2021-08-18 01:36:22">2021-08-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/13/Objection%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Objection使用学习笔记"><img src="https://image.winudf.com/v2/image1/Y29tLmF4Y29kZS5mcmlkYV9pY29uXzE1NDIwOTE0OTZfMDk5/icon.png?w=340&amp;fakeurl=1" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Objection使用学习笔记"/></a><div class="content"><a class="title" href="/2021/08/13/Objection%E4%BD%BF%E7%94%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Objection使用学习笔记">Objection使用学习笔记</a><time datetime="2021-08-12T19:13:22.000Z" title="Created 2021-08-13 03:13:22">2021-08-13</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By NPCS_AS</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
