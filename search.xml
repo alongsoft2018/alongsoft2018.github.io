@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>pip使用心得记录</title>
+      <link href="/2022/06/04/pip%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/"/>
+      <url>/2022/06/04/pip%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97/</url>
+      
+        <content type="html"><![CDATA[<p>[toc]</p><h1 id="使用pip-install-e"><a href="#使用pip-install-e" class="headerlink" title="使用pip install -e."></a>使用pip install -e.</h1><ul><li>可以git clone到本地后进入文件夹,工作路径至“setup.py”文件夹，运行,-e后面的点是命令的一部分，它表示当前目录<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install -e.</span><br></pre></td></tr></table></figure></li><li>pip会自动将包复制到site-packages</li></ul><h1 id="pip-源设置"><a href="#pip-源设置" class="headerlink" title="pip 源设置"></a>pip 源设置</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> pip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python字符串处理</title>
       <link href="/2022/06/03/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/"/>
       <url>/2022/06/03/python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A4%84%E7%90%86/</url>
