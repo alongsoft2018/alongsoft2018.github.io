@@ -6,7 +6,7 @@
   <link href="https://alongsoft2018.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://alongsoft2018.github.io.git/"/>
-  <updated>2022-07-10T09:07:28.108Z</updated>
+  <updated>2022-07-11T14:36:36.617Z</updated>
   <id>https://alongsoft2018.github.io.git/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCODE添加右键打开</title>
+    <link href="https://alongsoft2018.github.io.git/2022/07/11/VSCODE%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80/"/>
+    <id>https://alongsoft2018.github.io.git/2022/07/11/VSCODE%E6%B7%BB%E5%8A%A0%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80/</id>
+    <published>2022-07-11T14:36:32.000Z</published>
+    <updated>2022-07-11T14:36:36.617Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode]</span><br><span class="line">@=&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\*\shell\VSCode\command]</span><br><span class="line">@=&quot;\&quot;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\&quot; \&quot;%1\&quot;&quot;</span><br><span class="line"></span><br><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode]</span><br><span class="line">@=&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]</span><br><span class="line">@=&quot;\&quot;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;</span><br><span class="line"></span><br><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]</span><br><span class="line">@=&quot;Open with Code&quot;</span><br><span class="line">&quot;Icon&quot;=&quot;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]</span><br><span class="line">@=&quot;\&quot;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\&quot; \&quot;%V\&quot;&quot;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">cungudafa:记录</summary>
+    
+    
+    
+    
+    <category term="vscode" scheme="https://alongsoft2018.github.io.git/tags/vscode/"/>
+    
+    <category term="regedit" scheme="https://alongsoft2018.github.io.git/tags/regedit/"/>
+    
+  </entry>
   
   <entry>
     <title>lua table的C API</title>
