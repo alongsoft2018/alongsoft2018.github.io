@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>E项目编译记录</title>
+      <link href="/2022/07/26/E%E9%A1%B9%E7%9B%AE%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/"/>
+      <url>/2022/07/26/E%E9%A1%B9%E7%9B%AE%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="编译记录"><a href="#编译记录" class="headerlink" title="编译记录"></a>编译记录</h1><h2 id="安装必要的库"><a href="#安装必要的库" class="headerlink" title="安装必要的库"></a>安装必要的库</h2><ul><li>cJSON<blockquote><ul><li>安装</li></ul></blockquote></li></ul><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/DaveGamble/cJSON.git</span><br><span class="line"><span class="built_in">cd</span> cJSON</span><br><span class="line">mkdir build</span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">cmake ..</span><br><span class="line"><span class="comment"># cd .. 回到上级目录</span></span><br><span class="line">make</span><br><span class="line">sudo make install <span class="comment"># 要加sudo 否则  Permission denied</span></span><br><span class="line"><span class="comment">#--------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># mkdir -p /usr/local/lib /usr/local/include/cjson</span></span><br><span class="line"><span class="comment"># cp -a cJSON.h /usr/local/include/cjson</span></span><br><span class="line"><span class="comment"># cp -a libcjson.so libcjson.so.1 libcjson.so.1.7.15 /usr/local/lib</span></span><br><span class="line"><span class="comment"># cp -a cJSON_Utils.h /usr/local/include/cjson</span></span><br><span class="line"><span class="comment"># cp -a libcjson_utils.so libcjson_utils.so.1 libcjson_utils.so.1.7.15 /usr/local/lib</span></span><br><span class="line"><span class="comment">#--------------------------------------------------------------</span></span><br></pre></td></tr></table></figure><blockquote><p>安装mosquitto</p></blockquote><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa</span><br><span class="line"><span class="comment">#--------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># More info: https://launchpad.net/~mosquitto-dev/+archive/ubuntu/mosquitto-ppa</span></span><br><span class="line"><span class="comment"># Press [ENTER] to continue or Ctrl-c to cancel adding it.</span></span><br><span class="line"><span class="comment">#--------------------------------------------------------------</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install mosquitto -y</span><br><span class="line">sudo apt-get install mosquitto-clients -y</span><br></pre></td></tr></table></figure><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/tmp/cc7DP8ZD.o: In <span class="keyword">function</span> `parse_number<span class="string">&#x27;:</span></span><br><span class="line"><span class="string">cJSON.c:(.text+0x48f): undefined reference to `pow&#x27;</span></span><br><span class="line">/tmp/cc7DP8ZD.o: In <span class="keyword">function</span> `print_number<span class="string">&#x27;:</span></span><br><span class="line"><span class="string">cJSON.c:(.text+0x5b4): undefined reference to `floor&#x27;</span></span><br></pre></td></tr></table></figure><blockquote><p><code>解决办法</code>：在编译语句后加 <code>-lm</code>，原因是在Unix，一些数学计算并不属于Unix的标准库</p></blockquote><figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="variable">$(CC)</span> -g -o <span class="variable">$@</span> <span class="variable">$^</span>  <span class="variable">$(LDFLAGS)</span> <span class="variable">$(CFLAGS)</span>  -lm</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> make </tag>
+            
+            <tag> cmake </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux信息查询指令汇总</title>
       <link href="/2022/07/23/Linux%20%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4%E6%B1%87%E6%80%BB/"/>
       <url>/2022/07/23/Linux%20%E4%BF%A1%E6%81%AF%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4%E6%B1%87%E6%80%BB/</url>
